@@ -50,6 +50,7 @@ class LibraryCategoryController extends Controller
      */
     public function actionIndex(): string
     {
+
         $queryParams = Yii::$app->request->queryParams;
         $searchForm = new LibraryCategorySearchForm();
 
