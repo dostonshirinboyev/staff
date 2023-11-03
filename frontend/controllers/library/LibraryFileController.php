@@ -2,26 +2,31 @@
 
 namespace frontend\controllers\library;
 
-use LibraryFileService;
+use settings\forms\library\search\LibraryFileSearchForm;
+use settings\readModels\library\LibraryFileReadRepository;
+use settings\repositories\library\LibraryFileRepository;
+use settings\services\library\LibraryFileService;
+use Yii;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\Response;
 
 class LibraryFileController extends Controller
 {
     private $libraryFileService;
-    private $libraryReadRepository;
+    private $libraryFileReadRepository;
     private $libraryRepository;
 
     public function __construct($id, $module,
         LibraryFileService              $libraryFileService,
-        LibraryCategoryReadRepository   $libraryReadRepository,
-        LibraryCategoryRepository       $libraryRepository,
+        LibraryFileReadRepository   $libraryFileReadRepository,
+        LibraryFileRepository       $libraryFileRepository,
         $config = []) {
 
         parent::__construct($id, $module, $config);
-        $this->libraryService           = $libraryService;
-        $this->libraryReadRepository    = $libraryReadRepository;
-        $this->libraryRepository        = $libraryRepository;
+        $this->libraryFileService           = $libraryFileService;
+        $this->libraryFileReadRepository    = $libraryFileReadRepository;
+        $this->li        = $libraryFileRepository;
     }
 
     /**
@@ -45,7 +50,7 @@ class LibraryFileController extends Controller
     public function actionIndex(): string
     {
         $queryParams = Yii::$app->request->queryParams;
-        $searchForm = new LibraryCategorySearchForm();
+        $searchForm = new LibraryFileSearchForm();
 
         $searchForm->load($queryParams);
         $dataProvider = $this->libraryReadRepository->search($searchForm);
