@@ -2,10 +2,10 @@
 
 namespace frontend\controllers\library;
 
-use LibraryFileService;
 use settings\forms\library\search\LibraryFileSearchForm;
 use settings\readModels\library\LibraryFileReadRepository;
 use settings\repositories\library\LibraryFileRepository;
+use settings\services\library\LibraryFileService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
