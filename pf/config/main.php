@@ -9,7 +9,7 @@ $params = array_merge(
 return [
 //    'defaultRoute' => 'irrigation/road/index',
     'name' => Yii::t('app', 'staff.uz'),
-    'id' => 'app-frontend',
+    'id' => 'app-pf',
     'language' => 'uz',
     'timeZone' => 'Asia/Tashkent',
     'basePath' => dirname(__DIR__),

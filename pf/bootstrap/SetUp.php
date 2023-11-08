@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\bootstrap;
+namespace pf\bootstrap;
 
 use yii\base\BootstrapInterface;
 use yii\helpers\ArrayHelper;

@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\controllers\library;
+namespace pf\controllers\library;
 
 use settings\forms\library\search\LibraryFileSearchForm;
 use settings\readModels\library\LibraryFileReadRepository;

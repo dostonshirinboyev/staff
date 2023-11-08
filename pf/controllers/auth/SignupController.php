@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\controllers\auth;
+namespace pf\controllers\auth;
 
 use settings\useCases\auth\SignupService;
 use Yii;
