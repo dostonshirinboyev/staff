@@ -32,8 +32,8 @@ class AppAsset extends AssetBundle
         'vendor/php-email-form/validate.js',
         'js/main.js'
     ];
-//    public $depends = [
-////        'yii\web\YiiAsset',
-////        'yii\bootstrap\BootstrapAsset',
-//    ];
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
+    ];
 }
