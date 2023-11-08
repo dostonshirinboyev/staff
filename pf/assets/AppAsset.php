@@ -14,7 +14,7 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/bootstrap.min.css',
         'css/materialdesignicons.min.css',
-//        'https://unicons.iconscout.com/release/v3.0.6/css/line.css',
+        'https://unicons.iconscout.com/release/v3.0.6/css/line.css',
         'css/tiny-slider.css',
         'css/style.css',
         'css/colors/default.css'
