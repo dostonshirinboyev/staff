@@ -1,5 +1,5 @@
 <?php
-namespace frontend\controllers\auth;
+namespace pf\controllers\auth;
 
 use common\auth\Identity;
 use settings\forms\auth\student\LoginStudentForm;

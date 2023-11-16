@@ -9,19 +9,19 @@ $params = array_merge(
 return [
 //    'defaultRoute' => 'irrigation/road/index',
     'name' => Yii::t('app', 'staff.uz'),
-    'id' => 'app-frontend',
+    'id' => 'app-pf',
     'language' => 'uz',
     'timeZone' => 'Asia/Tashkent',
     'basePath' => dirname(__DIR__),
     'bootstrap' => [
         'log',
         'common\bootstrap\SetUp',
-        'frontend\bootstrap\SetUp',
+        'pf\bootstrap\SetUp',
     ],
-    'controllerNamespace' => 'frontend\controllers',
+    'controllerNamespace' => 'pf\controllers',
     'components' => [
         'request' => [
-            'csrfParam' => '_csrf-frontend',
+            'csrfParam' => '_csrf-pf',
             'baseUrl' => '',
         ],
         'user' => [
@@ -50,25 +50,25 @@ return [
             'errorAction' => 'site/error',
         ],
         'backendUrlManager' => require __DIR__ . '/../../backend/config/urlManager.php',
-        'frontendUrlManager' => require __DIR__ . '/urlManager.php',
+        'pfUrlManager' => require __DIR__ . '/urlManager.php',
         'urlManager' => function () {
-            return Yii::$app->get('frontendUrlManager');
+            return Yii::$app->get('pfUrlManager');
         },
 
     ],
-    'as access' => [
-        'class' => 'yii\filters\AccessControl',
-        'except' => [
-            'auth/auth/login',
-            'auth/auth/hemis-student-login',
-            'auth/auth/hemis-employee-login',
-        ],
-        'rules' => [
-            [
-                'allow' => true,
-                'roles' => ['@'],
-            ],
-        ],
-    ],
+//    'as access' => [
+//        'class' => 'yii\filters\AccessControl',
+//        'except' => [
+//            'auth/auth/login',
+//            'auth/auth/hemis-student-login',
+//            'auth/auth/hemis-employee-login',
+//        ],
+//        'rules' => [
+//            [
+//                'allow' => true,
+//                'roles' => ['@'],
+//            ],
+//        ],
+//    ],
     'params' => $params,
 ];

@@ -1,5 +1,5 @@
 <?php
-namespace frontend\controllers\auth;
+namespace pf\controllers\auth;
 
 use settings\useCases\auth\PasswordResetService;
 use Yii;

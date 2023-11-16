@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\controllers\irrigation;
+namespace pf\controllers\irrigation;
 
 use settings\forms\irrigation\RoadIrrigationTaskForm;
 use settings\forms\irrigation\search\RoadSearchForm;

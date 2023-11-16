@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\controllers\user;
+namespace pf\controllers\user;
 
 use settings\readModels\library\LibraryCategoryReadRepository;
 use settings\readModels\user\EmployeeReadRepository;

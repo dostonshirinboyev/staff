@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\controllers\cabinet;
+namespace pf\controllers\cabinet;
 
 use settings\auth\TelegramAuth;
 use settings\forms\user\UserTelegramForm;
