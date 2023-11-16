@@ -44,7 +44,7 @@ AppAsset::register($this);
         <div class="row align-items-center">
             <div class="col-lg-7 col-md-6">
                 <div class="me-lg-5">
-                    <?=Html::img('@web/logo/ssuv_logo.png', ['class' => 'img-fluid d-block mx-auto', 'alt' => 'Sayt Logatipi mavjud emas', 'style' => 'height: 450px'])?>
+                    <?=Html::img('@web/logo/ssuv_logo.png', ['class' => 'img-fluid d-block mx-auto', 'alt' => 'Sayt Logatipi mavjud emas', 'style' => 'height: 50%'])?>
                 </div>
             </div>
             <div class="col-lg-5 col-md-6">
