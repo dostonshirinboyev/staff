@@ -24,4 +24,7 @@ use yii\helpers\Html;
         . Html::endForm()
         ?>
     </div><!--end col-->
+    <div class="col-12 mt-4">
+        <?= Html::tag('div', Html::a(Html::tag('i', '', ['class' => 'mdi mdi-home text-primary']).' '.Yii::t('app', "Bosh sahifaga qaytish"), '/', ['class' => 'btn btn-light']), ['class' => 'd-grid'])?>
+    </div>
 </div>
