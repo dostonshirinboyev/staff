@@ -4,7 +4,6 @@ use settings\helpers\UserTypeHelper;
 use settings\repositories\user\UserPersonalDataRepository;
 use yii\helpers\Html;
 use yii\helpers\Url;
-/* @var $userPersonalData UserPersonalDataRepository */
 
 ?>
 <header id="topnav" class="defaultscroll sticky">

@@ -16,8 +16,8 @@ class AppAsset extends AssetBundle
         'css/materialdesignicons.min.css',
         'https://unicons.iconscout.com/release/v3.0.6/css/line.css',
         'css/tiny-slider.css',
-        'css/style.css',
-        'css/colors/default.css'
+        ['href' => 'css/style.css', 'rel' => 'stylesheet', 'type' => 'text/css', 'id' => 'theme-opt'],
+        ['href' => 'css/colors/default.css', 'rel' => 'stylesheet', 'id' => 'color-opt']
     ];
     public $js = [
         'js/bootstrap.bundle.min.js',
