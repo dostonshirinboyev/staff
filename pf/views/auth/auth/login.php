@@ -8,7 +8,7 @@ use yii\helpers\Html;
     <div class="col-6 mt-3">
         <?= Html::beginForm(['hemis-employee-login'], 'post', ['class' => 'd-grid'])
             . Html::submitButton(
-      Html::img('@web/logo/teacher.png', ['class' =>'text-primary', 'alt' => Yii::t('app',"O'qituvchi"), 'style' => 'height: 25px']) . Yii::t('app', "O'qituvchi"),
+      Html::img('@web/logo/teacher.png', ['class' =>'text-primary', 'alt' => Yii::t('app',"O'qituvchi"), 'style' => 'height: 50px']) .' '. Yii::t('app', "O'qituvchi"),
                 ['class' => 'btn btn-light']
             )
             . Html::endForm()
@@ -18,7 +18,7 @@ use yii\helpers\Html;
     <div class="col-6 mt-3">
         <?= Html::beginForm(['hemis-student-login'], 'post', ['class' => 'd-grid'])
         . Html::submitButton(
-            Html::img('@web/logo/student.png', ['class' =>'text-primary', 'alt' => Yii::t('app',"Talaba"), 'style' => 'height: 25px']) . Yii::t('app', "Talaba"),
+            Html::img('@web/logo/student.png', ['class' =>'text-primary', 'alt' => Yii::t('app',"Talaba"), 'style' => 'height: 50px']) .' '. Yii::t('app', "Talaba"),
             ['class' => 'btn btn-light']
         )
         . Html::endForm()
