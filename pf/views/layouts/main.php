@@ -7,8 +7,8 @@
 use pf\assets\AppAsset;
 use settings\repositories\user\UserPersonalDataRepository;
 use yii\helpers\Html;
+$userPersonalData = (new UserPersonalDataRepository())->get(Yii::$app->user->id);
 AppAsset::register($this);
-
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -35,19 +35,20 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <!-- Loader -->
-<!-- <div id="preloader">
+<div id="preloader">
     <div id="status">
         <div class="spinner">
             <div class="double-bounce1"></div>
             <div class="double-bounce2"></div>
         </div>
     </div>
-</div> -->
+</div>
 <!-- Loader -->
 
 <!-- Navbar STart -->
 <?= $this->render(
-    'header'
+    'header',
+    ['userPersonalData' => $userPersonalData]
 ); ?>
 <!-- Navbar End -->
 
@@ -156,6 +157,30 @@ AppAsset::register($this);
     </div>
 </div><!--Note: Cookies Js including in plugins.init.js (path like; js/plugins.init.js) and Cookies css including in _helper.scss (path like; scss/_helper.scss)-->
 <!-- Cookies End -->
+
+<!-- Offcanvas Start -->
+<div class="offcanvas bg-white offcanvas-top" tabindex="-1" id="offcanvasTop">
+    <div class="offcanvas-body d-flex align-items-center align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="text-center">
+                        <h4>Hozir qidiring.....</h4>
+                        <div class="subcribe-form mt-4">
+                            <form>
+                                <div class="mb-0">
+                                    <input type="text" id="help" name="name" class="border bg-white rounded-pill" required="" placeholder="Qidirish">
+                                    <button type="submit" class="btn btn-pills btn-primary">Qidirish</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </div>
+</div>
+<!-- Offcanvas End -->
 
 <!-- Back to top -->
 <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fs-5"><i data-feather="arrow-up" class="fea icon-sm icons align-middle"></i></a>

@@ -16,7 +16,9 @@ class UserPersonalDataRepository
      */
     public function get($user_id)
     {
-        return $this->getBy(['user_id' => $user_id]);
+        if ($user_id != null) {
+            return $this->getBy(['user_id' => $user_id]);
+        }
     }
 
     /**

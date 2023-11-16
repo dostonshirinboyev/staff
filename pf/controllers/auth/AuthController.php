@@ -30,17 +30,15 @@ class AuthController extends Controller
 //        $this->service = $service;
     }
 
-    /**
-     * @return array[]
-     */
-    public function behaviors(): array
+
+    public function behaviors()
     {
         return [
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [
-                    'hemis-student-login' => ['GET'],
-                    'hemis-employee-login' => ['GET'],
+                    'hemis-student-login' => ['get'],
+                    'hemis-employee-login' => ['get'],
                 ],
             ],
         ];
@@ -92,13 +90,8 @@ class AuthController extends Controller
         }
     }
 
-    /**
-     * @return Response
-     * @throws BadRequestHttpException
-     * @throws Exception
-     * @throws Throwable
-     */
-    public function actionHemisEmployeeLogin(): Response
+
+    public function actionHemisEmployeeLogin()
     {
         $code = Yii::$app->request->get('code');
         $state = Yii::$app->request->get('state');
