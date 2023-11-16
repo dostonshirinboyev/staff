@@ -1,3 +1,14 @@
+<?php
+
+/* @var $this yii\web\View */
+/* @var $name string */
+/* @var $message string */
+/* @var $exception Exception */
+
+use yii\helpers\Html;
+
+$this->title = Yii::$app->name;
+?>
 <!-- Hero Start -->
 <section class="bg-half-170 d-table w-100">
     <div class="container">
