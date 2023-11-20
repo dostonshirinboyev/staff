@@ -7,7 +7,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 ?>
-<?php $this->beginContent('@frontend/views/layouts/main.php') ?>
+<?php $this->beginContent('@ssuv/views/layouts/main.php') ?>
 
 <div class="row">
     <div id="content" class="col-sm-9">

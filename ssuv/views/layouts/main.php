@@ -4,7 +4,7 @@
 /* @var $content string */
 /* @var $userPersonalData UserPersonalDataRepository */
 
-use pf\assets\AppAsset;
+use ssuv\assets\AppAsset;
 use settings\repositories\user\UserPersonalDataRepository;
 use yii\helpers\Html;
 $userPersonalData = (new UserPersonalDataRepository())->get(Yii::$app->user->id);
