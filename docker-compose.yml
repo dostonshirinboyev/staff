@@ -18,6 +18,14 @@ services:
       - ./:/var/www/app
     ports:
       - "${FRONTEND_NGINX_PORT}:80"
+  ssuv-nginx:
+    build:
+      context: ./ssuv/docker
+      dockerfile: nginx.docker
+    volumes:
+      - ./:/var/www/app
+    ports:
+      - "${SSUV_NGINX_PORT}:80"
   pf-nginx:
     build:
       context: ./pf/docker
