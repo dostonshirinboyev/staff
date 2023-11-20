@@ -60,7 +60,6 @@ class HemisIdAuthService
     public function authEmployee($code, $state): ?User
     {
         $hemisIdUserData = $this->client->fetchAuthHemis($code, $state, HemisID::TYPE_EMPLOYEE);
-
         if (empty($hemisUserData = $hemisIdUserData['hemis_user_data'])) {
             throw new \RuntimeException(Yii::t('app', "HemisID ning fetchAuthHemis() metodida xatolik yuz berdi!"));
         }

@@ -3,7 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use frontend\assets\AppErrorAsset;
+use ssuv\assets\AppErrorAsset;
 use yii\helpers\Html;
 
 AppErrorAsset::register($this);
