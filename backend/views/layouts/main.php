@@ -1,6 +1,6 @@
 <?php
 
-use settings\repositories\UserNameRepository;
+use settings\repositories\user\UserPersonalDataRepository;
 use yii\helpers\Html;
 
 /* @var $this \yii\web\View */
@@ -11,7 +11,7 @@ backend\assets\AppAsset::register($this);
 dmstr\web\AdminLteAsset::register($this);
 
 $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
-$user = (new UserNameRepository())->get(Yii::$app->user->id);
+$user = (new UserPersonalDataRepository())->get(Yii::$app->user->id);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

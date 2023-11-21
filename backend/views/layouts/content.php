@@ -36,7 +36,7 @@ use dmstr\widgets\Alert;
 </div>
 
 <footer class="main-footer">
-    <strong> Samarqandyo'lko'kalam Unitar Korxonasi <?= date('Y') . Yii::t('app', "-yil")?> Admin</strong>
+    <strong> SSUV.UZ <?= date('Y') . Yii::t('app', "-yil")?> Admin</strong>
 </footer>
 
 <!--<div class='control-sidebar-bg'></div>-->
