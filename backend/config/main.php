@@ -54,7 +54,7 @@ return [
             'errorAction' => 'site/error',
         ],
         'backendUrlManager' => require __DIR__ . '/urlManager.php',
-        'frontendUrlManager' => require __DIR__ . '/../../frontend/config/urlManager.php',
+        'ssuvUrlManager' => require __DIR__ . '/../../ssuv/config/urlManager.php',
         'urlManager' => function () {
             return Yii::$app->get('backendUrlManager');
         },
@@ -68,7 +68,7 @@ return [
         'rules' => [
             [
                 'allow' => true,
-                'roles' => ['admin'],
+                'roles' => ['@'],
             ],
         ],
     ],
