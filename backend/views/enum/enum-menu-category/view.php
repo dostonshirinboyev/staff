@@ -1,6 +1,7 @@
 <?php
 
 use settings\entities\enums\EnumMenuCategory;
+use settings\helpers\LanguageHelper;
 use settings\status\enum\EnumMenuCategoryStatus;
 use yii\helpers\Html;
 use yii\web\View;
@@ -10,7 +11,7 @@ use yii\web\YiiAsset;
 /* @var $this View */
 /* @var $model EnumMenuCategory */
 
-$this->title = $model->title_uz;
+$this->title = $model->{LanguageHelper::getTitleLang()};
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Menyu kategoriyalar'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 YiiAsset::register($this);

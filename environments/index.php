@@ -38,6 +38,8 @@ return [
             'frontend/web/assets',
             'pf/runtime',
             'pf/web/assets',
+            'ssuv/runtime',
+            'ssuv/web/assets',
         ],
         'setExecutable' => [
             'yii',
@@ -47,6 +49,7 @@ return [
             'backend/config/main-local.php',
             'frontend/config/main-local.php',
             'pf/config/main-local.php',
+            'ssuv/config/main-local.php',
         ],
     ],
     'Production' => [
@@ -58,6 +61,8 @@ return [
             'frontend/web/assets',
             'pf/runtime',
             'pf/web/assets',
+            'ssuv/runtime',
+            'ssuv/web/assets',
         ],
         'setExecutable' => [
             'yii',
@@ -66,6 +71,7 @@ return [
             'backend/config/main-local.php',
             'frontend/config/main-local.php',
             'pf/config/main-local.php',
+            'ssuv/config/main-local.php',
         ],
     ],
 ];

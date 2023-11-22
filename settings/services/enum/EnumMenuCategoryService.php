@@ -78,7 +78,7 @@ class EnumMenuCategoryService
     public function remove($id)
     {
         $enumMenuCategory = $this->enumMenuCategoryRepository->get($id);
-        $enumMenuCategory->status = DeleteHelper::DELETE_YES;
+        $enumMenuCategory->is_deleted = DeleteHelper::DELETE_YES;
         $this->enumMenuCategoryRepository->save($enumMenuCategory);
     }
 }
