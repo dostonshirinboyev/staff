@@ -4,13 +4,14 @@ namespace settings\readModels\enum;
 
 use settings\entities\enums\EnumMenuCategory;
 use settings\forms\enum\search\EnumMenuCategorySearchForm;
+use settings\helpers\DeleteHelper;
 use yii\data\ActiveDataProvider;
 
 class EnumMenuCategoryReadRepository
 {
     public function search(EnumMenuCategorySearchForm $form): ActiveDataProvider
     {
-        $query = EnumMenuCategory::find()->orderBy('id desc');
+        $query = EnumMenuCategory::find()->andWhere(['is_deleted' => DeleteHelper::DELETE_NO])->orderBy('id desc');
 
         if ($form->hasErrors()) {
             $query->andWhere('1=0');
