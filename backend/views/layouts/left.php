@@ -40,9 +40,9 @@ use yii\helpers\Html;
                 'options' => ['class' => 'sidebar-menu', 'data-widget' => 'tree'],
                 'items' => [
                     ['label' => Yii::t('app', "Boshqaruv paneli"), 'options' => ['class' => 'header']],
-                        ['label' => Yii::t('app', "Kategoriyalar"), 'options' => ['class' => 'no-active'], 'icon' => 'folder', 'items' => [
-                            ['label' => Yii::t('app', "Universitet bo'limlari"), 'icon' => 'fa fa-irrigation', 'url' => ['/university-category'], 'active' => $this->context->id == 'category/university-category'],
-//                            ['label' => Yii::t('app', 'Lavozimlar'), 'icon' => 'fa fa-user-secret', 'url' => ['/enum-road-position/index'], 'active' => $this->context->id == 'enum/enum-road-position'],
+                        ['label' => Yii::t('app', "Menyu"), 'options' => ['class' => 'no-active'], 'icon' => 'folder', 'items' => [
+                            ['label' => Yii::t('app', "Menyular"), 'icon' => 'fa fa-irrigation', 'url' => ['/menu'], 'active' => $this->context->id == 'menu/menu'],
+                            ['label' => Yii::t('app', 'Menyu kategoriyalari'), 'icon' => 'fa fa-user-secret', 'url' => ['/enum-menu-category'], 'active' => $this->context->id == 'enum/enum-menu-category'],
 //                            ['label' => Yii::t('app', "Yo'l turlari"), 'icon' => 'fa fa-user-secret', 'url' => ['/enum-road-type/index'], 'active' => $this->context->id == 'enum/enum-road-type'],
 //                            ['label' => Yii::t('app', 'Hodimlar'), 'icon' => 'fa fa-user-secret', 'url' => ['/enum-road-employees/index'], 'active' => $this->context->id == 'enum/enum-road-employees'],
                         ]],

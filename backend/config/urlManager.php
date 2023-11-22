@@ -10,9 +10,13 @@ return [
     'rules' => [
         '' => 'site/index',
 //        '<_a:index>' => 'category/university-category/<_a>',
-        'university-category' => 'category/university-category/index',
-        'university-category/create' => 'category/university-category/create',
-        'university-category/<action:(view|update|activate|delete)>/<id:\d+>'  => 'category/university-category/<action>',
+        'menu' => 'menu/menu/index',
+        'menu/create' => 'menu/menu/create',
+        'menu/<action:(view|update|activate|delete)>/<id:\d+>'  => 'menu/menu/<action>',
+
+        'enum-menu-category' => 'enum/enum-menu-category/index',
+        'enum-menu-category/create' => 'enum/enum-menu-category/create',
+        'enum-menu-category/<action:(view|update|activate|delete)>/<id:\d+>'  => 'enum/enum-menu-category/<action>',
 //        'road'          => 'irrigation/road/index',
 //        'road/create'   => 'irrigation/road/create',
 //        'enum-road-position'          => 'enum/enum-road-position/index',
