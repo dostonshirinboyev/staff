@@ -4,7 +4,7 @@ use settings\widgets\menu\MenuSsuvWidget;
 
 ?>
 
-<?= MenuSsuvWidget::widget(['message' => 'Salom'])?>
+<?//= MenuSsuvWidget::widget(['message' => 'Salom'])?>
 
 <!--<div id="navigation">-->
     <!-- Navigation Menu-->

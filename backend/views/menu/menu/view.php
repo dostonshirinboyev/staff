@@ -65,7 +65,13 @@ YiiAsset::register($this);
         'model' => $model,
         'attributes' => [
             'id',
-            'parent_id',
+            [
+                'attribute' => 'parent_id',
+                'format'    => 'html',
+                'value'     => function ($data) {
+                   return $data->parent->{LanguageHelper::getTitleLang()};
+                },
+            ],
             'title_ru',
             'title_uz',
             'title_oz',
