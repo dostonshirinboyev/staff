@@ -11,9 +11,11 @@
             <?php elseif ($men->parent_id != null): ?>
                 <li class="has-submenu parent-menu-item">
                     <a href="javascript:void(0)"><?=$men->title_oz;?></a><span class="menu-arrow"></span>
-                    <ul class="submenu">
-                        <li><a href="documentation.html" class="sub-menu-item">O'qituvchilar ro'yxati</a></li>
-                    </ul>
+<!--                    --><?php //foreach ($menu->getMenus as $paren): ?>
+<!--                    <ul class="submenu">-->
+<!--                        <li><a href="documentation.html" class="sub-menu-item">--><?//=$paren->title_oz?><!--</a></li>-->
+<!--                    </ul>-->
+<!--                    --><?php //endforeach; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>

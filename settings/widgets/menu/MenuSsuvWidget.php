@@ -25,9 +25,11 @@ class MenuSsuvWidget extends Widget
         $menuAlias = 'm';
         $menu =  Menu::find()
 //            ->select('*')
-            ->alias("{$menuAlias}")
-            ->andWhere(["{$menuAlias}.status" => GeneralStatus::STATUS_ENABLED])
-            ->andWhere(["{$menuAlias}.is_deleted" => DeleteHelper::DELETE_NO])
+//            ->alias("{$menuAlias}")
+            ->andWhere(["status" => GeneralStatus::STATUS_ENABLED])
+            ->andWhere(["is_deleted" => DeleteHelper::DELETE_NO])
+//            ->andWhere(["{$menuAlias}.status" => GeneralStatus::STATUS_ENABLED])
+//            ->andWhere(["{$menuAlias}.is_deleted" => DeleteHelper::DELETE_NO])
 //            ->andWhere(["{$menuAlias}.parent_id" => null])
 //            ->asArray()
             ->all();
