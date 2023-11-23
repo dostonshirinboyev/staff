@@ -10,7 +10,7 @@ class MenuReadRepository
 {
     public function search(MenuSearchForm $form): ActiveDataProvider
     {
-        $query = Menu::find()->orderBy('id desc');
+        $query = Menu::find()->orderBy('order asc');
 
         if ($form->hasErrors()) {
             $query->andWhere('1=0');

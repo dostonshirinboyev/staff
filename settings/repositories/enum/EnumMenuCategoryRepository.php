@@ -4,6 +4,7 @@ namespace settings\repositories\enum;
 
 use settings\entities\enums\EnumMenuCategory;
 use settings\entities\NotFoundException;
+use settings\helpers\DeleteHelper;
 use settings\status\GeneralStatus;
 use Yii;
 use yii\db\ActiveRecord;
@@ -29,7 +30,8 @@ class EnumMenuCategoryRepository
         return EnumMenuCategory::find()
             ->select('*')
             ->alias("{$enumMenuCategory}")
-            ->where(["{$enumMenuCategory}.status" => GeneralStatus::STATUS_ENABLED])
+            ->andWhere(["{$enumMenuCategory}.status" => GeneralStatus::STATUS_ENABLED])
+            ->andWhere(["{$enumMenuCategory}.is_deleted" => DeleteHelper::DELETE_NO])
             ->asArray()
             ->all();
     }

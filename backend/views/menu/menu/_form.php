@@ -1,6 +1,8 @@
 <?php
 
 use settings\forms\menu\MenuForm;
+use settings\helpers\LanguageHelper;
+use settings\repositories\enum\EnumMenuCategoryRepository;
 use settings\repositories\menu\MenuRepository;
 use settings\status\menu\MenuStatus;
 use yii\helpers\ArrayHelper;
@@ -28,10 +30,17 @@ use kartik\select2\Select2;
 
             </div>
             <div class="col-md-6">
-                <?= $activeForm->field($form, 'category_id')->textInput() ?>
+
+                <?= $activeForm->field($form, 'category_id')->widget(Select2::class, [
+                    'data' => ArrayHelper::map(EnumMenuCategoryRepository::findAllForSelect(),'id', LanguageHelper::getTitleLang()),
+                    'options' => ['placeholder' => '-- ' . Yii::t('app',"Menyu kategoriyasini tanlang") . ' --'],
+                    'pluginOptions' => [
+                        'allowClear' => true,
+                    ],
+                ]) ?>
 
                 <?= $activeForm->field($form, 'parent_id')->widget(Select2::class, [
-                    'data' => ArrayHelper::map(MenuRepository::findParentForSelect(),'id','title_uz'),
+                    'data' => ArrayHelper::map(MenuRepository::findParentForSelect(),'id', LanguageHelper::getTitleLang()),
                     'options' => ['placeholder' => '-- ' . Yii::t('app',"Yuqori turuvchi menyuni tanalang") . ' --'],
                     'pluginOptions' => [
                         'allowClear' => true,
