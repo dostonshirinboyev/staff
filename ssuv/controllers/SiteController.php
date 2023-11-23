@@ -1,6 +1,7 @@
 <?php
 
 namespace ssuv\controllers;
+use settings\entities\menu\Menu;
 use yii\web\Controller;
 
 /**
@@ -25,6 +26,9 @@ class SiteController extends Controller
         ];
     }
     public function actionIndex(){
+        $menu =  Menu::find()->all();
+        echo "<pre>";
+        print_r($menu);die();
         return $this->render('index');
     }
 }

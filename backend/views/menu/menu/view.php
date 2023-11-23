@@ -1,7 +1,8 @@
 <?php
 
 use settings\entities\menu\Menu;
-use settings\status\category\MenuStatus;
+use settings\helpers\LanguageHelper;
+use settings\status\menu\MenuStatus;
 use yii\helpers\Html;
 use yii\web\View;
 use yii\widgets\DetailView;
@@ -10,7 +11,7 @@ use yii\web\YiiAsset;
 /* @var $this View */
 /* @var $model Menu */
 
-$this->title = $model->title_uz;
+$this->title = $model->{LanguageHelper::getTitleLang()};
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Kategoriyalar'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 YiiAsset::register($this);
@@ -64,7 +65,13 @@ YiiAsset::register($this);
         'model' => $model,
         'attributes' => [
             'id',
-            'parent_id',
+            [
+                'attribute' => 'parent_id',
+                'format'    => 'html',
+                'value'     => function ($data) {
+                   return $data->parent->{LanguageHelper::getTitleLang()};
+                },
+            ],
             'title_ru',
             'title_uz',
             'title_oz',

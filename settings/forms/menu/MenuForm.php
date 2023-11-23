@@ -15,9 +15,9 @@ class MenuForm extends Model
     public function rules(): array
     {
         return [
-            [['parent_id', 'category_id', 'order', 'status', 'is_deleted', 'created_by', 'updated_by'], 'default', 'value' => null],
+            [['parent_id', 'category_id', 'order', 'status', 'created_by', 'updated_by'], 'default', 'value' => null],
             [['parent_id', 'category_id', 'order', 'status', 'is_deleted', 'created_by', 'updated_by'], 'integer'],
-            [['category_id', 'title_uz', 'title_oz', 'title_ru', 'title_en', 'code_name', 'created_by'], 'required'],
+            [['category_id', 'title_uz', 'title_oz', 'title_ru', 'title_en', 'code_name'], 'required'],
             [['created_at', 'updated_at'], 'safe'],
             [['title_uz', 'title_oz', 'title_ru', 'title_en', 'code_name'], 'string', 'max' => 255],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => EnumMenuCategory::class, 'targetAttribute' => ['category_id' => 'id']],

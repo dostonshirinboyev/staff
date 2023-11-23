@@ -3,6 +3,7 @@
 use kartik\date\DatePicker;
 use kartik\select2\Select2;
 use settings\forms\menu\search\MenuSearchForm;
+use settings\helpers\LanguageHelper;
 use settings\status\menu\MenuStatus;
 use yii\data\ActiveDataProvider;
 use yii\grid\ActionColumn;
@@ -70,6 +71,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'attribute' => 'parent_id',
+                'value' => function ($data) {
+                    if ($data->parent_id) {
+                        return $data->parent->{LanguageHelper::getTitleLang()};
+                    }
+                    return null;
+                },
                 'headerOptions' => ['class' => 'text-center', 'width' => '10%'],
                 'filterOptions' => ['class' => 'text-center', 'width' => '10%'],
                 'contentOptions' => ['class' => 'text-center', 'width' => '10%'],
