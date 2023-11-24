@@ -26,9 +26,12 @@ class SiteController extends Controller
         ];
     }
     public function actionIndex(){
-        $menu =  Menu::find()->all();
-        echo "<pre>";
-        print_r($menu);die();
+//        $menu =  Menu::find()
+//            ->andWhere(['parent_id' => null])
+//            ->asArray()
+//            ->all();
+//        echo "<pre>";
+//        print_r($menu);die();
         return $this->render('index');
     }
 }

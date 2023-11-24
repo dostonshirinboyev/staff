@@ -38,11 +38,12 @@ class MenuRepository
     {
         $menu = 'm';
         return Menu::find()
-            ->select('*')
+            ->joinWith(['parent'])
             ->alias("{$menu}")
             ->andWhere(["{$menu}.status" => GeneralStatus::STATUS_ENABLED])
-            ->andWhere(["{$menu}.parent_id" => null])
+//            ->andWhere(["{$menu}.parent_id" => null])
             ->asArray()
+            ->orderBy('order asc')
             ->all();
     }
 

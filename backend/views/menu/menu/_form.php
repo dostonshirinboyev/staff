@@ -33,19 +33,20 @@ use kartik\select2\Select2;
 
                 <?= $activeForm->field($form, 'category_id')->widget(Select2::class, [
                     'data' => ArrayHelper::map(EnumMenuCategoryRepository::findAllForSelect(),'id', LanguageHelper::getTitleLang()),
-                    'options' => ['placeholder' => '-- ' . Yii::t('app',"Menyu kategoriyasini tanlang") . ' --'],
+//                    'options' => ['placeholder' => '-- ' . Yii::t('app',"Menyu kategoriyasini tanlang") . ' --'],
                     'pluginOptions' => [
                         'allowClear' => true,
                     ],
                 ]) ?>
 
                 <?= $activeForm->field($form, 'parent_id')->widget(Select2::class, [
-                    'data' => ArrayHelper::map(MenuRepository::findParentForSelect(),'id', LanguageHelper::getTitleLang()),
+                    'data' => ArrayHelper::map(MenuRepository::findParentForSelect(),'id', 'title_oz','parent.title_oz'),
                     'options' => ['placeholder' => '-- ' . Yii::t('app',"Yuqori turuvchi menyuni tanalang") . ' --'],
                     'pluginOptions' => [
                         'allowClear' => true,
                     ],
                 ]) ?>
+
                 <?= $activeForm->field($form, 'code_name')->textInput() ?>
 
                 <?= $activeForm->field($form, 'order')->textInput() ?>
