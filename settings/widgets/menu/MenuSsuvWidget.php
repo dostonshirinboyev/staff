@@ -33,6 +33,7 @@ class MenuSsuvWidget extends Widget
             ->joinWith('menus.menus')
             ->alias("{$menuAlias}")
             ->andWhere(["{$menuAlias}.parent_id" => null])
+            ->andWhere(["{$menuAlias}.status" => GeneralStatus::STATUS_ENABLED])
             ->all();
         return $this->render('menuSsuv', [
             'menus' => $menus
