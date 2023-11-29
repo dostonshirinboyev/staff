@@ -26,6 +26,14 @@ services:
       - ./:/var/www/app
     ports:
       - "${SSUV_NGINX_PORT}:80"
+  arm-nginx:
+    build:
+      context: ./arm/docker
+      dockerfile: nginx.docker
+    volumes:
+      - ./:/var/www/app
+    ports:
+      - "${ARM_NGINX_PORT}:80"
   pf-nginx:
     build:
       context: ./pf/docker
