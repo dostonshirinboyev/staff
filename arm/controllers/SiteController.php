@@ -34,4 +34,8 @@ class SiteController extends Controller
 //        print_r($menu);die();
         return $this->render('index');
     }
+
+    public function actionTest(){
+        echo 'test';
+    }
 }
