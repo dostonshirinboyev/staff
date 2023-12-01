@@ -9,10 +9,10 @@ use yii\data\ArrayDataProvider;
 
 class LibraryZiyonetReadRepository
 {
-    public function search(LibraryZiyonetSearchForm $form)
+    public function search(LibraryZiyonetSearchForm $form, $category_id = null)
     {
         $libraryZiyonetDataProvider = (new LibraryZiyonetIntegration())->libraryZiyonetCurl(
-            $form->category_id,
+            $category_id,
             $form->search_by_name,
             $form->search_by_desc,
             $form->page,

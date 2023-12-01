@@ -66,16 +66,16 @@ $this->title = Yii::$app->name;
                             <div class="industries-tab-menu" style="align: center">
                                 <ul class="menu-tab-menu nav nav-tabs " data-bs-toggle="tab-hover" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;">
                                     <li class="nav-item">
-                                        <a href="<?= Url::to(['lists'])?>" class="animated active" style="box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;">
+                                        <a href="<?= Url::to(['lists'])?>" class="animated <?= 'active' ? Yii::$app->controller->id == 'lists' : '' ?>" style="box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;">
                                             <?= Html::tag('div', Yii::t('app', "Barchasi"))?>
                                         </a>
                                     </li>
-                                    <?php foreach ($categorys as $key => $category):?>
-                                    <li class="nav-item">
-                                        <a href="<?=Url::to(['library/library-ziyonet/category-list', 'id' => $category['id']])?>" class="animated" style="box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;">
-                                            <div><?php echo $category['name'] ?></div>
-                                        </a>
-                                    </li>
+                                    <?php foreach ($categorys as $key => $category): ?>
+                                        <li class="nav-item">
+                                            <a href="<?=Url::to(['library/library-ziyonet/category-list', 'id' => $category['id']])?>" class="animated <?= $category['id'] == Yii::$app->request->get('id') ? 'active' : '' ?>" style="box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;">
+                                                <div><?php echo $category['name'] ?></div>
+                                            </a>
+                                        </li>
                                     <?php endforeach; ?>
                                 </ul>
                             </div>

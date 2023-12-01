@@ -6,6 +6,7 @@
 /* @var $exception Exception */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->title = Yii::$app->name;
 ?>
@@ -212,7 +213,7 @@ $this->title = Yii::$app->name;
 
                             </li>
                             <li class="nav-item">
-                                   <a href="/site/ziyonet">ZiyoNET</a>
+                                   <a href="<?= Url::to(['library/library-ziyonet/lists'])?>">ZiyoNET</a>
                             </li>
                             <li class="nav-item">
                                 <a href="/site/milliy">Milliy kutubxona</a>

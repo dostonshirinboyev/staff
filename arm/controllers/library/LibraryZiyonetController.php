@@ -30,7 +30,8 @@ class LibraryZiyonetController extends Controller
         $this->libraryZiyonetReadRepository      = $libraryZiyonetReadRepository;
     }
 
-        public function actionLists(){
+        public function actionLists()
+        {
             $categorys = $this->libraryCategoryZiyonetIntegration->libraryZiyonetCategoryCurl();
             $queryParams = Yii::$app->request->queryParams;
             $searchForm = new LibraryZiyonetSearchForm();
@@ -43,5 +44,22 @@ class LibraryZiyonetController extends Controller
                 'dataProvider' => $dataProvider,
                 'categorys' => $categorys
             ]);
+        }
+
+    public function actionCategoryList()
+    {
+        $id = Yii::$app->request->get('id');
+        $categorys = $this->libraryCategoryZiyonetIntegration->libraryZiyonetCategoryCurl();
+        $queryParams = Yii::$app->request->queryParams;
+        $searchForm = new LibraryZiyonetSearchForm();
+
+        $searchForm->load($queryParams);
+        $dataProvider = $this->libraryZiyonetReadRepository->search($searchForm, $id);
+
+        return $this->render('category-list', [
+            'searchForm' => $searchForm,
+            'dataProvider' => $dataProvider,
+            'categorys' => $categorys
+        ]);
     }
 }
