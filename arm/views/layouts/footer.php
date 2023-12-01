@@ -8,8 +8,8 @@
 
                             <div class="footer-about-widget">
                                 <div class="footer-logo">
-                                    <a class="logo" href="index-2.html">
-                                        <img src="assets/img/logo.png" alt="#">
+                                    <a class="logo" href="#">
+                                        <img src="/img/logo/logo.png" style="width: 60px; hwi" alt="#">
                                     </a>
                                 </div>
                                 <p>We vel ex eu diam aliquam fermentum. Maecenas leo tellus tincidunt auctor massa nec sagittis scelerisque nunc. Cras nisi tellus luctus at nisi venenatis lacinia.</p>
@@ -56,7 +56,7 @@
                                 <div class="f-latest-post-inner">
                                     <div class="single-f-post">
                                         <div class="f-post-img">
-                                            <img src="assets/img/blog/4.jpg" alt="#">
+                                            <img src="/img/blog/4.jpg" alt="#">
                                         </div>
                                         <div class="f-post-content">
                                             <h5><a href="blog-details-sidebar.html">Aenean venenatis lorem massa nec rutrum</a></h5>
@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="single-f-post">
                                         <div class="f-post-img">
-                                            <img src="assets/img/blog/5.jpg" alt="#">
+                                            <img src="/img/blog/5.jpg" alt="#">
                                         </div>
                                         <div class="f-post-content">
                                             <h5><a href="blog-details-sidebar.html">Etiam nisi odio malesuada non pretium ut</a></h5>
@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="single-f-post">
                                         <div class="f-post-img">
-                                            <img src="assets/img/blog/6.jpg" alt="#">
+                                            <img src="/img/blog/6.jpg" alt="#">
                                         </div>
                                         <div class="f-post-content">
                                             <h5><a href="blog-details-sidebar.html">Ociosqu ad litora torquent perlo conubia</a></h5>

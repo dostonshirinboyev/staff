@@ -4,8 +4,8 @@
             <div class="col-lg-2 col-md-3 col-12">
 
                 <div class="logo">
-                    <a href="index-2.html" class="logo-1"><img src="img/logo.png" alt="#"></a>
-                    <a href="index-2.html" class="logo-2"><img src="img/logo-2.png" alt="#"></a>
+                    <a href="/" class="logo-1"><img src="/img/logo1.png" alt="#"></a>
+                    <a href="/" class="logo-2"><img src="/img/logo1.png" alt="#"></a>
                 </div>
                 <div class="mobile-nav"></div>
             </div>
@@ -81,7 +81,7 @@
             <div class="col-lg-3 col-md-2 col-12">
 
                 <div class="menu-right-btn">
-                    <a href="contact.html" class="theme-btn">Get A Quote<i class="far fa-long-arrow-right"></i></a>
+                    <a href="contact.html" class="theme-btn">Tizimga kirish<i class="far fa-long-arrow-right"></i></a>
                 </div>
             </div>
         </div>

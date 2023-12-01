@@ -38,4 +38,19 @@ class SiteController extends Controller
     public function actionTest(){
         echo 'test';
     }
+
+    public function actionUnilibrary()
+    {
+        return $this->render('unilibrary');
+    }
+
+    public function actionZiyonet()
+    {
+        return $this->render('ziyonet');
+    }
+
+    public function actionMilliy()
+    {
+        return $this->render('milliy');
+    }
 }
