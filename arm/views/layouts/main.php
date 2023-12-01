@@ -20,7 +20,7 @@ AppAsset::register($this);
     <meta name="description" content="#">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" href="assets/img/favicon.png">
+    <link rel="icon" href="/img/logo/logo.png">
 
     <title><?= Html::encode($this->title) ?></title>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500;1,700&amp;display=swap" rel="stylesheet">
@@ -28,6 +28,33 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
+
+<div class="topbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+
+                <div class="topbar-Social">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="active"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+
+                <div class="topbar-Contact">
+                    <ul>
+                        <li><a href="#"><i class="far fa-phone"></i>+1 123 456 7894</a></li>
+                        <li><a href="#"><i class="far fa-envelope"></i><span class="__cf_email__" data-cfemail="325b5c545d72574a535f425e571c515d5f">[email&#160;protected]</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="preeloader">
     <div class="loader">
@@ -67,12 +94,15 @@ AppAsset::register($this);
             <div class="col-lg-6 col-md-6 col-12">
 
                 <div class="hero-image-2">
-                    <img src="assets/img/banner/banner-1.png" alt="#">
+                    <img src="/img/banner/banner-1.png" alt="#">
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+
 <?= $content;?>
 
 <?= $this->render(

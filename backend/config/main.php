@@ -23,6 +23,7 @@ return [
         'request' => [
             'csrfParam' => '_csrf-backend',
             'cookieValidationKey' => $params['cookieValidationKey'],
+            'baseUrl' => '/admin',
         ],
         'user' => [
             'identityClass' => 'common\auth\Identity',
