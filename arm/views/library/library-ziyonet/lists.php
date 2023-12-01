@@ -5,9 +5,16 @@
 /* @var $message string */
 /* @var $exception Exception */
 
+use settings\integrations\library\LibraryCategoryZiyonetIntegration;
+use settings\readModels\library\LibraryZiyonetReadRepository;
 use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\widgets\ListView;
 
 $this->title = Yii::$app->name;
+/* @var $categorys LibraryCategoryZiyonetIntegration */
+/* @var $dataProvider LibraryZiyonetReadRepository */
+
 ?>
 <section class="blog-area ">
     <div class="container">
@@ -59,17 +66,17 @@ $this->title = Yii::$app->name;
                             <div class="industries-tab-menu" style="align: center">
                                 <ul class="menu-tab-menu nav nav-tabs " data-bs-toggle="tab-hover" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;">
                                     <li class="nav-item">
-                                        <a class="animated active" style="box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;" href="#tab5" data-bs-toggle="tab">
-                                            <div>Barchasi</div>
+                                        <a href="<?= Url::to(['lists'])?>" class="animated active" style="box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;">
+                                            <?= Html::tag('div', Yii::t('app', "Barchasi"))?>
                                         </a>
                                     </li>
-                                    <?php foreach($model as $mod){?>
+                                    <?php foreach ($categorys as $key => $category):?>
                                     <li class="nav-item">
                                         <a class="animated" style="box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;" href="#tab4" data-bs-toggle="tab">
-                                            <div><?php echo $mod['name'] ?></div>
+                                            <div><?php echo $category['name'] ?></div>
                                         </a>
                                     </li>
-                                        <?php }?>
+                                    <?php endforeach; ?>
                                 </ul>
                             </div>
                         </div>
@@ -94,34 +101,24 @@ $this->title = Yii::$app->name;
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="tab4">
                                     <div class="industries-tab-inner">
-                                        <div class="row">
-
-                                            <div class="col-lg-4 col-md-6 col-12 wow fadeIn" data-wow-delay="0.2s">
-
-                                                <div class="single-blog2">
-
-                                                    <div class="blog2-image">
-                                                        <img src="/img/blog/1.jpg" alt="#">
-                                                        <div class="post-date">
-                                                            June 27 <span>2021</span>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="blog2-content">
-                                                        <ul class="blog2-meta">
-                                                            <li><i class="far fa-folder-open"></i></li>
-                                                            <li><a href="#">Data Strategy</a></li>
-                                                        </ul>
-                                                        <h3><a href="blog-details.html">The Current State Of Artificial Intelligence</a></h3>
-                                                        <p>Integer id semper odio. Suspendisse arcu est, elementum accumsan libero vitae, lobortis dictum sem. Integer semper velit augue, at tristique ligula porta ut. </p>
-                                                        <div class="blog2-button">
-                                                            <a href="blog-details.html">Read More<i class="far fa-arrow-right"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
+                                        <?= ListView::widget([
+                                            'summary' => false,
+                                            'dataProvider' => $dataProvider,
+                                            'itemView' => function ($model, $key, $index, $widget) {
+                                                return $this->render('_list',[
+                                                    'model' => $model,
+                                                    'key' => $key
+                                                ]);
+                                            },
+                                            'itemOptions' => [
+                                                'tag' => false,
+                                            ],
+                                            'options' => [
+                                                'id' => false,
+                                                'tag' => 'div',
+                                                'class' => 'row'
+                                            ],
+                                        ]); ?>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="tab5">

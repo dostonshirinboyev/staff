@@ -46,7 +46,7 @@ class TestController extends Controller
         $searchForm->load($queryParams);
         $dataProvider = $this->libraryZiyonetReadRepository->search($searchForm);
 
-        return $this->render('ziyonet', [
+        return $this->render('lists', [
             'searchForm' => $searchForm,
             'dataProvider' => $dataProvider,
         ]);
