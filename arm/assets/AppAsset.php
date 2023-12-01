@@ -40,4 +40,9 @@ class AppAsset extends AssetBundle
         'js/jquery.slicknav.min.js',
         'js/main.js',
     ];
+
+//        public $depends = [
+//        'yii\web\YiiAsset',
+//        'yii\bootstrap\BootstrapAsset',
+//    ];
 }
