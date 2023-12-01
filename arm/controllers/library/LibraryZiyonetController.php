@@ -2,9 +2,12 @@
 
 namespace arm\controllers\library;
 
+use settings\forms\library\search\LibraryZiyonetSearchForm;
 use settings\integrations\library\LibraryCategoryZiyonetIntegration;
 use settings\integrations\library\LibraryZiyonetIntegration;
 use settings\readModels\library\LibraryZiyonetReadRepository;
+use Yii;
+use yii\base\BaseObject;
 use yii\web\Controller;
 
 class LibraryZiyonetController extends Controller
@@ -28,9 +31,17 @@ class LibraryZiyonetController extends Controller
     }
 
         public function actionLists(){
-        $ziyonetCategory = $this->libraryCategoryZiyonetIntegration->libraryZiyonetCategoryCurl();
+            $categorys = $this->libraryCategoryZiyonetIntegration->libraryZiyonetCategoryCurl();
+            $queryParams = Yii::$app->request->queryParams;
+            $searchForm = new LibraryZiyonetSearchForm();
+
+            $searchForm->load($queryParams);
+            $dataProvider = $this->libraryZiyonetReadRepository->search($searchForm);
+
             return $this->render('lists', [
-                'model' => $ziyonetCategory
+                'searchForm' => $searchForm,
+                'dataProvider' => $dataProvider,
+                'categorys' => $categorys
             ]);
     }
 }
