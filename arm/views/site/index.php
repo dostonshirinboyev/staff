@@ -79,11 +79,11 @@ $this->title = Yii::$app->name;
                                             <div class="col-lg-6 col-12">
 
                                                 <div class="industries-content">
-                                                    <h3>Markaz haqida Donec ut quam in leo tincidunt viverra porta et erat pellentesque dolor</h3>
-                                                    <h6>In malesuada sed enim vel rutrum. Fusce finibus commodo mi ac lacinia. Vestibulum eget interdum mi. Morbi eu mi et eros aliquet efficitur non et est.</h6>
-                                                    <p>Nunc lacinia nisl vel mauris ultrices porta eget nec quam. Curabitur vestibulum ac ipsum at pulvinar. Suspendisse in dui vitae magna tristique blandit eget vitae turpis. Sed et tortor ac massa egestas blandit eu quis mi. Vestibulum gravida sapien vehicula dui efficitur convallis. Sed congue urna diam, at ornare turpis cursus non. Etiam a urna dui. Suspendisse ultrices lobortis urna non imperdiet. Aenean erat neque, varius quis erat vitae, tincidunt ornare ante. Mauris eget libero vehicula, laoreet purus nec, mattis tortor. In iaculis odio at urna semper pharetra. Aenean in augue at ante blandit pharetra venenatis vitae nunc. Ut libero tellus, posuere in mi ut, accumsan semper ex.</p>
+                                                    <h3>Axborot resurs markazi haqida</h3>
+                                                    <h6></h6>
+                                                    <p>Zamonaviy talablar hisobga olingan holda kutubxona tarmog’ini tashkil qilishni takomillashtirish, o’sib kelayotgan yosh avlodning intelektual extiyojlarini qondirish madaniy, ma’naviy axloqiy qadriyatlarni saqlab qolishga yo’naltirilgan prinspial yangi axborot markazlarini barpo etish, shuningdek aholini yanada kengroq va tizimli axborot bilan taminlash Respublikamiz prizidentimiz  tomonidan 2006-yil 20-iyunda 381-sonli qaror qabul qilindi.</p>
                                                     <div class="industries-content-btn">
-                                                        <a href="contact.html" class="theme-btn primary">Get A Quote<i class="far fa-long-arrow-right"></i></a>
+                                                        <a href="contact.html" class="theme-btn primary">BATAFSIL<i class="far fa-long-arrow-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>

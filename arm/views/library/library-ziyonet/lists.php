@@ -16,23 +16,6 @@ $this->title = Yii::$app->name;
 /* @var $dataProvider LibraryZiyonetReadRepository */
 
 ?>
-<section class="blog-area ">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-12">
-                <div class="blog-detail-sidebar">
-
-                    <div class="singles-s-widget">
-                        <form action="#" class="search-widget" method="get">
-                            <input type="text"  name="search" placeholder="Kitob qidirish uchun nomini kiriting..." required>
-                            <button type="submit"  class="search-btn"><i class="far fa-search"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="industries-area blog-area blog-page-area">
     <div class="container">
         <div class="container">
