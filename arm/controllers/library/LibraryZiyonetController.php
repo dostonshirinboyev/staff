@@ -65,18 +65,6 @@ class LibraryZiyonetController extends Controller
 
     public function actionView()
     {
-        $id = Yii::$app->request->get('id');
-        $categorys = $this->libraryCategoryZiyonetIntegration->libraryZiyonetCategoryCurl();
-        $queryParams = Yii::$app->request->queryParams;
-        $searchForm = new LibraryZiyonetSearchForm();
-
-        $searchForm->load($queryParams);
-        $dataProvider = $this->libraryZiyonetReadRepository->search($searchForm, $id);
-
-        return $this->render('view', [
-            'searchForm' => $searchForm,
-            'dataProvider' => $dataProvider,
-            'categorys' => $categorys
-        ]);
+        return $this->render('view');
     }
 }
