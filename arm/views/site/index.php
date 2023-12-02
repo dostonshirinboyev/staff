@@ -16,9 +16,9 @@ $this->title = Yii::$app->name;
         <div class="row">
             <div class="col-lg-8 col-12">
                 <div class="industries-title">
-                    <span>Industries</span>
-                    <h3>Industries Solution</h3>
-                    <p>Integer vel elit congue accumsan ligula placerat mi uisque tempor <br> sapien justo sed accumsan tortor ultrices nec.</p>
+
+                    <h3>AXBOROT RESURS MARKAZI</h3>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -33,26 +33,26 @@ $this->title = Yii::$app->name;
                                 <ul class="menu-tab-menu nav nav-tabs" data-bs-toggle="tab-hover">
                                     <li class="nav-item">
                                         <a class="animated active" href="#tab4" data-bs-toggle="tab">
-                                            <div><i class="far fa-car"></i></div>
-                                            <div>Trasportation & Logistics</div>
+                                            <div><i class="far fa-university"></i></div>
+                                            <div>MARKAZ HAQIDA</div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="animated" href="#tab5" data-bs-toggle="tab">
-                                            <div><i class="far fa-map-marker-alt"></i></div>
-                                            <div>Travel & Hospitality</div>
+                                            <div><i class="far fa-university"></i></div>
+                                            <div>MARKAZ TARIXI</div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="animated" href="#tab6" data-bs-toggle="tab">
                                             <div><i class="far fa-university"></i></div>
-                                            <div>Financial & Banking</div>
+                                            <div>ME'YORIY HUJJATLAR</div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="animated" href="#tab7" data-bs-toggle="tab">
-                                            <div><i class="far fa-heartbeat"></i></div>
-                                            <div>Health care & Medicine</div>
+                                            <div><i class="far fa-university"></i></div>
+                                            <div>ARMDAN FOYDALANISH</div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -79,7 +79,7 @@ $this->title = Yii::$app->name;
                                             <div class="col-lg-6 col-12">
 
                                                 <div class="industries-content">
-                                                    <h3>Donec ut quam in leo tincidunt viverra porta et erat pellentesque dolor</h3>
+                                                    <h3>Markaz haqida Donec ut quam in leo tincidunt viverra porta et erat pellentesque dolor</h3>
                                                     <h6>In malesuada sed enim vel rutrum. Fusce finibus commodo mi ac lacinia. Vestibulum eget interdum mi. Morbi eu mi et eros aliquet efficitur non et est.</h6>
                                                     <p>Nunc lacinia nisl vel mauris ultrices porta eget nec quam. Curabitur vestibulum ac ipsum at pulvinar. Suspendisse in dui vitae magna tristique blandit eget vitae turpis. Sed et tortor ac massa egestas blandit eu quis mi. Vestibulum gravida sapien vehicula dui efficitur convallis. Sed congue urna diam, at ornare turpis cursus non. Etiam a urna dui. Suspendisse ultrices lobortis urna non imperdiet. Aenean erat neque, varius quis erat vitae, tincidunt ornare ante. Mauris eget libero vehicula, laoreet purus nec, mattis tortor. In iaculis odio at urna semper pharetra. Aenean in augue at ante blandit pharetra venenatis vitae nunc. Ut libero tellus, posuere in mi ut, accumsan semper ex.</p>
                                                     <div class="industries-content-btn">
@@ -103,7 +103,7 @@ $this->title = Yii::$app->name;
                                             <div class="col-lg-6 col-12">
 
                                                 <div class="industries-content">
-                                                    <h3>Donec ut quam in leo tincidunt viverra porta et erat pellentesque dolor</h3>
+                                                    <h3>Markaz tarixi Donec ut quam in leo tincidunt viverra porta et erat pellentesque dolor</h3>
                                                     <h6>In malesuada sed enim vel rutrum. Fusce finibus commodo mi ac lacinia. Vestibulum eget interdum mi. Morbi eu mi et eros aliquet efficitur non et est.</h6>
                                                     <p>Nunc lacinia nisl vel mauris ultrices porta eget nec quam. Curabitur vestibulum ac ipsum at pulvinar. Suspendisse in dui vitae magna tristique blandit eget vitae turpis. Sed et tortor ac massa egestas blandit eu quis mi. Vestibulum gravida sapien vehicula dui efficitur convallis. Sed congue urna diam, at ornare turpis cursus non. Etiam a urna dui. Suspendisse ultrices lobortis urna non imperdiet. Aenean erat neque, varius quis erat vitae, tincidunt ornare ante. Mauris eget libero vehicula, laoreet purus nec, mattis tortor. In iaculis odio at urna semper pharetra. Aenean in augue at ante blandit pharetra venenatis vitae nunc. Ut libero tellus, posuere in mi ut, accumsan semper ex.</p>
                                                     <div class="industries-content-btn">
@@ -127,7 +127,7 @@ $this->title = Yii::$app->name;
                                             <div class="col-lg-6 col-12">
 
                                                 <div class="industries-content">
-                                                    <h3>Donec ut quam in leo tincidunt viverra porta et erat pellentesque dolor</h3>
+                                                    <h3>me'yoriy hujjatlar Donec ut quam in leo tincidunt viverra porta et erat pellentesque dolor</h3>
                                                     <h6>In malesuada sed enim vel rutrum. Fusce finibus commodo mi ac lacinia. Vestibulum eget interdum mi. Morbi eu mi et eros aliquet efficitur non et est.</h6>
                                                     <p>Nunc lacinia nisl vel mauris ultrices porta eget nec quam. Curabitur vestibulum ac ipsum at pulvinar. Suspendisse in dui vitae magna tristique blandit eget vitae turpis. Sed et tortor ac massa egestas blandit eu quis mi. Vestibulum gravida sapien vehicula dui efficitur convallis. Sed congue urna diam, at ornare turpis cursus non. Etiam a urna dui. Suspendisse ultrices lobortis urna non imperdiet. Aenean erat neque, varius quis erat vitae, tincidunt ornare ante. Mauris eget libero vehicula, laoreet purus nec, mattis tortor. In iaculis odio at urna semper pharetra. Aenean in augue at ante blandit pharetra venenatis vitae nunc. Ut libero tellus, posuere in mi ut, accumsan semper ex.</p>
                                                     <div class="industries-content-btn">
@@ -151,7 +151,7 @@ $this->title = Yii::$app->name;
                                             <div class="col-lg-6 col-12">
 
                                                 <div class="industries-content">
-                                                    <h3>Donec ut quam in leo tincidunt viverra porta et erat pellentesque dolor</h3>
+                                                    <h3>Armdan foydalanish Donec ut quam in leo tincidunt viverra porta et erat pellentesque dolor</h3>
                                                     <h6>In malesuada sed enim vel rutrum. Fusce finibus commodo mi ac lacinia. Vestibulum eget interdum mi. Morbi eu mi et eros aliquet efficitur non et est.</h6>
                                                     <p>Nunc lacinia nisl vel mauris ultrices porta eget nec quam. Curabitur vestibulum ac ipsum at pulvinar. Suspendisse in dui vitae magna tristique blandit eget vitae turpis. Sed et tortor ac massa egestas blandit eu quis mi. Vestibulum gravida sapien vehicula dui efficitur convallis. Sed congue urna diam, at ornare turpis cursus non. Etiam a urna dui. Suspendisse ultrices lobortis urna non imperdiet. Aenean erat neque, varius quis erat vitae, tincidunt ornare ante. Mauris eget libero vehicula, laoreet purus nec, mattis tortor. In iaculis odio at urna semper pharetra. Aenean in augue at ante blandit pharetra venenatis vitae nunc. Ut libero tellus, posuere in mi ut, accumsan semper ex.</p>
                                                     <div class="industries-content-btn">
@@ -680,7 +680,7 @@ $this->title = Yii::$app->name;
                                 </div>
                                 <div class="fact-content">
                                     <h6><span class="counter">200</span>+</h6>
-                                    <p>Completed Projects</p>
+                                    <p>Umumiy kitoblar fondi</p>
                                 </div>
                             </div>
                         </div>
@@ -688,11 +688,11 @@ $this->title = Yii::$app->name;
 
                             <div class="single-fact">
                                 <div class="fact-image">
-                                    <i class="fal fa-mug-hot"></i>
+                                    <i class="fal fa-book-alt"></i>
                                 </div>
                                 <div class="fact-content">
                                     <h6><span class="counter">3000</span>+</h6>
-                                    <p>Cup Of Tea</p>
+                                    <p>Audio kitoblar soni</p>
                                 </div>
                             </div>
                         </div>
@@ -704,7 +704,7 @@ $this->title = Yii::$app->name;
                                 </div>
                                 <div class="fact-content">
                                     <h6><span class="counter">100</span>+</h6>
-                                    <p>Team Members</p>
+                                    <p>Umumiy xodimlar soni</p>
                                 </div>
                             </div>
                         </div>
@@ -716,7 +716,7 @@ $this->title = Yii::$app->name;
                                 </div>
                                 <div class="fact-content">
                                     <h6><span class="counter">40</span>+</h6>
-                                    <p>Win Awards</p>
+                                    <p>Kunlik foydalanuvchilar</p>
                                 </div>
                             </div>
 
@@ -736,23 +736,15 @@ $this->title = Yii::$app->name;
             <div class="col-12">
                 <div class="partner-slider owl-carousel owl-theme">
                     <div class="single-partner">
-                        <a href="#"><img src="/img/partner/1.png" alt="#"></a>
+                        <a href="https://ziyonet.uz"><img src="/img/partner/ziyonet.png" alt="#"></a>
                     </div>
                     <div class="single-partner">
-                        <a href="#"><img src="/img/partner/2.png" alt="#"></a>
+                        <a href="https://unilibrary.uz"><img src="/img/partner/unilibrary.png" alt="#"></a>
                     </div>
                     <div class="single-partner">
-                        <a href="#"><img src="/img/partner/3.png" alt="#"></a>
+                        <a href="https://natlib.uz"><img src="/img/partner/milliy.png" alt="#"></a>
                     </div>
-                    <div class="single-partner">
-                        <a href="#"><img src="/img/partner/4.png" alt="#"></a>
-                    </div>
-                    <div class="single-partner">
-                        <a href="#"><img src="/img/partner/5.png" alt="#"></a>
-                    </div>
-                    <div class="single-partner">
-                        <a href="#"><img src="/img/partner/6.png" alt="#"></a>
-                    </div>
+
                 </div>
             </div>
         </div>

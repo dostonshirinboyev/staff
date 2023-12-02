@@ -71,9 +71,10 @@ AppAsset::register($this);
             <div class="col-lg-6 col-md-6 col-12">
 
                 <div class="hero-content animation-2">
-                    <span>Safe & secure your data with us</span>
-                    <h1>Data Science And Data Analysis Agency</h1>
-                    <p>Proin bibendum est quis nisl cursus vehicula id ac tellus nteger tincidunt lacus quis quam efficitur pretium usce sit amet auctor lectus.</p>
+                    <span></span>
+                    <p>SAMARQAND DAVLAT VETERINARIYA MEDITSINASI, CHORVACHILIK VA BIOTEXNOLOGIYALAR UNIVERSITETI</p>
+                    <h1>AXBOROT RESURS MARKAZI</h1>
+
                     <div class="hero-btn">
                         <a href="about.html" class="theme-btn primary">Learn More</a>
 

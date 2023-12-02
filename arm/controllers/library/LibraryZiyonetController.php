@@ -62,4 +62,9 @@ class LibraryZiyonetController extends Controller
             'categorys' => $categorys
         ]);
     }
+
+    public function actionView()
+    {
+        return $this->render('view');
+    }
 }
