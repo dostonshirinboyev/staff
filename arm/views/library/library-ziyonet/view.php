@@ -43,14 +43,14 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="row">
 
                             <div class="col-lg-12 col-12">
-                                <?php foreach($categorys as $model){?>
+
                                     <div class="service-details-main">
                                         <div class="service-d-list-content">
                                             <div class="row">
                                                 <div class="col-lg-6 col-md-6 col-12">
                                                     <div class="service-d-list-left">
                                                         <h5>Kitob haqida</h5>
-                                                        <p><?=substr($model['title'], 0, 80) . '...'?></p>
+                                                        <p>Title</p>
                                                         <ul class="service-d-list-inner">
                                                             <li><i class="far fa-user"></i><b>Muallif:</b> Muallif</li>
                                                             <li><i class="far fa-language"></i><b>Til:</b> Til </li>
@@ -60,25 +60,25 @@ $this->params['breadcrumbs'][] = $this->title;
                                                         </ul>
                                                     </div>
                                                     <div class="menu-right-btn">
-                                                        <a href="<?=$mod->image.'#toolbar=0'?>" class="theme-btn">Online o'qish<i class="far fa-eye"></i></a>
+                                                        <a href="#" class="theme-btn">Online o'qish<i class="far fa-eye"></i></a>
                                                     </div>
                                                     <div class="menu-right-btn">
-                                                        <a href="<?=$mod->image?>" class="theme-btn">Yuklab olish<i class="far fa-download"></i></a>
+                                                        <a href="#" class="theme-btn">Yuklab olish<i class="far fa-download"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-12">
                                                     <div class="service-d-list-right">
-                                                        <p><?=$mod->img?></p>
+                                                        <p>Image</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="service-details-content">
                                             <h3>Kitob haqida qisqacha izoh</h3>
-                                            <p><?= $mod->short?>.</p>
+                                            <p>short.</p>
                                         </div>
                                     </div>
-                                <?php }?>
+
 
                             </div>
 
