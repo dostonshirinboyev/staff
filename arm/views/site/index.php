@@ -680,7 +680,7 @@ $this->title = Yii::$app->name;
                                 </div>
                                 <div class="fact-content">
                                     <h6><span class="counter">200</span>+</h6>
-                                    <p>Completed Projects</p>
+                                    <p>Umumiy kitoblar fondi</p>
                                 </div>
                             </div>
                         </div>
@@ -688,11 +688,11 @@ $this->title = Yii::$app->name;
 
                             <div class="single-fact">
                                 <div class="fact-image">
-                                    <i class="fal fa-mug-hot"></i>
+                                    <i class="fal fa-book-alt"></i>
                                 </div>
                                 <div class="fact-content">
                                     <h6><span class="counter">3000</span>+</h6>
-                                    <p>Cup Of Tea</p>
+                                    <p>Audio kitoblar soni</p>
                                 </div>
                             </div>
                         </div>
@@ -704,7 +704,7 @@ $this->title = Yii::$app->name;
                                 </div>
                                 <div class="fact-content">
                                     <h6><span class="counter">100</span>+</h6>
-                                    <p>Team Members</p>
+                                    <p>Umumiy xodimlar soni</p>
                                 </div>
                             </div>
                         </div>
@@ -716,7 +716,7 @@ $this->title = Yii::$app->name;
                                 </div>
                                 <div class="fact-content">
                                     <h6><span class="counter">40</span>+</h6>
-                                    <p>Win Awards</p>
+                                    <p>Kunlik foydalanuvchilar</p>
                                 </div>
                             </div>
 
@@ -736,23 +736,15 @@ $this->title = Yii::$app->name;
             <div class="col-12">
                 <div class="partner-slider owl-carousel owl-theme">
                     <div class="single-partner">
-                        <a href="#"><img src="/img/partner/1.png" alt="#"></a>
+                        <a href="https://ziyonet.uz"><img src="/img/partner/ziyonet.png" alt="#"></a>
                     </div>
                     <div class="single-partner">
-                        <a href="#"><img src="/img/partner/2.png" alt="#"></a>
+                        <a href="https://unilibrary.uz"><img src="/img/partner/unilibrary.png" alt="#"></a>
                     </div>
                     <div class="single-partner">
-                        <a href="#"><img src="/img/partner/3.png" alt="#"></a>
+                        <a href="https://natlib.uz"><img src="/img/partner/milliy.png" alt="#"></a>
                     </div>
-                    <div class="single-partner">
-                        <a href="#"><img src="/img/partner/4.png" alt="#"></a>
-                    </div>
-                    <div class="single-partner">
-                        <a href="#"><img src="/img/partner/5.png" alt="#"></a>
-                    </div>
-                    <div class="single-partner">
-                        <a href="#"><img src="/img/partner/6.png" alt="#"></a>
-                    </div>
+
                 </div>
             </div>
         </div>
