@@ -8,7 +8,7 @@ use linslin\yii2\curl;
 
 class LibraryCategoryUnilibraryIntegration
 {
-    private $apiUnilibraryDomain    = 'https://api.unilibrary.uz/api/user/guest-publisher-resources';
+    private $apiUnilibraryDomain = 'https://api.unilibrary.uz/api/crm/i18n/lists';
 
     CONST LANGUAGE_UZ  = 'uz';
     CONST LANGUAGE_OZ  = 'oz';
@@ -21,20 +21,42 @@ class LibraryCategoryUnilibraryIntegration
 
         $unilibraryParams = [
             'language'     => self::LANGUAGE_UZ,
+            'category'     => 'front',
         ];
 
         $apiUnilibraryDomain = $this->apiUnilibraryDomain;
 
-//        $response = Json::decode($curl->setGetParams($ziyonetParams)->get($apiZiyonetDomain));
-//        try {
-//            if (!empty($response['data'])) {
-//                return $response['data'];
-//            } else {
-//                return Yii::t('app', "Ziyonetdan kutubxonasi kelmayapti!");
-//            }
-//        } catch (\DomainException $e) {
-//            Yii::$app->errorHandler->logException($e);
-//            Yii::$app->session->setFlash('error', $e->getMessage());
-//        }
+        $response = Json::decode($curl->setGetParams($unilibraryParams)->get($apiUnilibraryDomain));
+        try {
+            if (!empty($result = $response['result'])) {
+                return [
+                    [
+                        'id'    => 1,
+                        'name'  => $result['All_literatures'],
+                    ],
+                    [
+                        'id'    => 4,
+                        'name'  => $result['All_articles'],
+                    ],
+                    [
+                        'id'    => 3,
+                        'name'  => $result['Dissertations'],
+                    ],
+                    [
+                        'id'    => 2,
+                        'name'  => $result['Monographs'],
+                    ],
+                    [
+                        'id'    => 'journal',
+                        'name'  => $result['Journals'],
+                    ],
+                ];
+            } else {
+                return Yii::t('app', "Unilibrary kategory kutubxonasidan kelmayapti!");
+            }
+        } catch (\DomainException $e) {
+            Yii::$app->errorHandler->logException($e);
+            Yii::$app->session->setFlash('error', $e->getMessage());
+        }
     }
 }

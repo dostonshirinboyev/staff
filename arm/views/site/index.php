@@ -204,19 +204,16 @@ $this->title = Yii::$app->name;
                     <div class="industries-tab-menu text-center mb-5">
                         <ul class="menu-tab-menu nav nav-tabs tab-menu-flex" role="tablist" data-bs-toggle="tab-hover">
                             <li class="nav-item">
-                                <a class="animated shadow-lg active" id="library-tab" data-bs-toggle="tab" data-bs-target="#library" type="button" role="tab" aria-controls="library" aria-selected="true">
-                                    E-library
-                                </a>
+                                <?= Html::a(Yii::t('app', "E-library"), ['/'], ['class' => 'animated shadow-lg active']);?>
                             </li>
                             <li class="nav-item">
-                                   <a href="/site/unilibrary">Unilibrary</a>
-
+                                <?= Html::a(Yii::t('app', "Unilibrary"), ['library/library-unilibrary/lists'], ['class' => 'animated shadow-lg']);?>
                             </li>
                             <li class="nav-item">
-                                   <a href="<?= Url::to(['library/library-ziyonet/lists'])?>">ZiyoNET</a>
+                                <?= Html::a(Yii::t('app', "ZiyoNET"), ['library/library-ziyonet/lists'], ['class' => 'animated shadow-lg']);?>
                             </li>
                             <li class="nav-item">
-                                <a href="/site/milliy">Milliy kutubxona</a>
+                                <?= Html::a(Yii::t('app', "Milliy kutubxona"), ['library/library-ziyonet/lists'], ['class' => 'animated shadow-lg']);?>
                             </li>
                         </ul>
                     </div>

@@ -32,12 +32,13 @@ class LibraryZiyonetController extends Controller
 
         public function actionLists()
         {
+            $page = Yii::$app->request->get('page');
             $categorys = $this->libraryCategoryZiyonetIntegration->libraryZiyonetCategoryCurl();
             $queryParams = Yii::$app->request->queryParams;
             $searchForm = new LibraryZiyonetSearchForm();
 
             $searchForm->load($queryParams);
-            $dataProvider = $this->libraryZiyonetReadRepository->search($searchForm);
+            $dataProvider = $this->libraryZiyonetReadRepository->search($searchForm, null, $page);
 
             return $this->render('lists', [
                 'searchForm' => $searchForm,

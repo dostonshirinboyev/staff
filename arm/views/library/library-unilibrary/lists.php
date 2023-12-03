@@ -12,8 +12,6 @@ use yii\helpers\Url;
 use yii\widgets\ListView;
 
 $this->title = Yii::$app->name;
-/* @var $categorys LibraryCategoryZiyonetIntegration */
-/* @var $dataProvider LibraryZiyonetReadRepository */
 
 ?>
 <section class="blog-area ">
@@ -42,17 +40,16 @@ $this->title = Yii::$app->name;
                         <div class="industries-tab-menu text-center mb-5">
                             <ul class="menu-tab-menu nav nav-tabs tab-menu-flex" role="tablist" data-bs-toggle="tab-hover">
                                 <li class="nav-item">
-                                    <a href="/">E-library</a>
+                                    <?= Html::a(Yii::t('app', "E-library"), ['/'], ['class' => 'animated shadow-lg']);?>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/site/unilibrary">Unilibrary</a>
-
+                                    <?= Html::a(Yii::t('app', "Unilibrary"), ['library/library-unilibrary/lists'], ['class' => 'animated shadow-lg active']);?>
                                 </li>
                                 <li class="nav-item">
-                                    <?=Html::a(Yii::t('app', "ZiyoNET"), ['lists'], ['class' => 'animated shadow-lg active'])?>
+                                    <?= Html::a(Yii::t('app', "ZiyoNET"), ['library/library-ziyonet/lists'], ['class' => 'animated shadow-lg']);?>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/site/milliy">Milliy kutubxona</a>
+                                    <?= Html::a(Yii::t('app', "Milliy kutubxona"), ['library/library-ziyonet/lists'], ['class' => 'animated shadow-lg']);?>
                                 </li>
                             </ul>
                         </div>
@@ -62,6 +59,24 @@ $this->title = Yii::$app->name;
             <div class="tab-content" id="myTabContent">
                 <div class="industries-tab-inner" id="library" role="tabpanel" aria-labelledby="library-tab">
                     <div class="row">
+                        <div class="col-12">
+                            <div class="industries-tab-menu" style="align: center">
+                                <ul class="menu-tab-menu nav nav-tabs " data-bs-toggle="tab-hover" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;">
+                                    <li class="nav-item">
+                                        <a href="<?= Url::to(['lists'])?>" class="animated active" style="box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;">
+                                            <?= Html::tag('div', Yii::t('app', "Barchasi"))?>
+                                        </a>
+                                    </li>
+                                    <?php foreach ($categorys as $key => $category):?>
+                                        <li class="nav-item">
+                                            <a href="<?=Url::to(['library/library-unilibrary/category-list', 'id' => $category['id']])?>" class="animated" style="box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;">
+                                                <div><?php echo $category['name'] ?></div>
+                                            </a>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
                         <section class="blog-area ">
                             <div class="container">
                                 <div class="row">
@@ -79,25 +94,6 @@ $this->title = Yii::$app->name;
                                 </div>
                             </div>
                         </section>
-
-                        <div class="col-12">
-                            <div class="industries-tab-menu" style="align: center">
-                                <ul class="menu-tab-menu nav nav-tabs " data-bs-toggle="tab-hover" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;">
-                                    <li class="nav-item">
-                                        <a href="<?= Url::to(['lists'])?>" class="animated active" style="box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;">
-                                            <?= Html::tag('div', Yii::t('app', "Barchasi"))?>
-                                        </a>
-                                    </li>
-                                    <?php foreach ($categorys as $key => $category):?>
-                                    <li class="nav-item">
-                                        <a href="<?=Url::to(['library/library-ziyonet/category-list', 'id' => $category['id']])?>" class="animated" style="box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;">
-                                            <div><?php echo $category['name'] ?></div>
-                                        </a>
-                                    </li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </div>
-                        </div>
                         <div class="col-12">
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="tab4">
@@ -136,23 +132,9 @@ $this->title = Yii::$app->name;
                                                 ],
                                                 'prevPageLabel' => Html::tag('i', '', ['class' => 'fas fa-long-arrow-left']),
                                                 'nextPageLabel' => Html::tag('i', '', ['class' => 'fas fa-long-arrow-right']),
+                                                'maxButtonCount' => 5,
                                             ],
                                         ]); ?>
-<!--                                        <div class="row">-->
-<!--                                            <div class="col-12">-->
-<!---->
-<!--                                                <div class="pagination-main">-->
-<!--                                                    <ul class="pagination">-->
-<!--                                                        <li class="prev"><a href="#"><i class="fas fa-long-arrow-left"></i></a></li>-->
-<!--                                                        <li><a href="#">1</a></li>-->
-<!--                                                        <li class="active"><a href="#">2</a></li>-->
-<!--                                                        <li><a href="#">3</a></li>-->
-<!--                                                        <li class="next"><a href="#"><i class="fas fa-long-arrow-right"></i></a></li>-->
-<!--                                                    </ul>-->
-<!--                                                </div>-->
-<!---->
-<!--                                            </div>-->
-<!--                                        </div>-->
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="tab5">
