@@ -44,7 +44,7 @@ use yii\helpers\Url;
                 <li><a href="#"><?=$model['created_at'];?></a></li>
             </ul>
             <div class="blog2-button">
-                <a href="<?=Url::to(['library-ziyonet/view', 'id' => $model['id']])?>">Batafsil<i class="far fa-arrow-right"></i></a>
+                <a href="<?=$model['file'];?>">Batafsil<i class="far fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
