@@ -32,7 +32,7 @@ class LibraryUnilibraryController extends Controller
 
     public function actionLists()
     {
-        //$page = Yii::$app->request->get('page');
+        $page = Yii::$app->request->get('page');
         $categorys = $this->libraryCategoryUnilibraryIntegration->libraryUnilibraryCurl();
         $queryParams = Yii::$app->request->queryParams;
         $searchForm = new LibraryUnilibrarySearchForm();

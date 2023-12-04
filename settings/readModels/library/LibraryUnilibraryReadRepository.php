@@ -14,11 +14,11 @@ class LibraryUnilibraryReadRepository
 
         return new ArrayDataProvider([
             'allModels' => $libraryUnilibraryDataProvider['data'],
-            //'totalCount' => $libraryUnilibraryDataProvider['total'],
-            //'pagination' => [
-            //    'defaultPageSize' => $libraryUnilibraryDataProvider['to'],
-            //    'page' => $libraryUnilibraryDataProvider['current_page'],
-            //],
+            'totalCount' => $libraryUnilibraryDataProvider['total'],
+            'pagination' => [
+                'defaultPageSize' => $libraryUnilibraryDataProvider['to'],
+//                'page' => $libraryUnilibraryDataProvider['current_page'],
+            ],
         ]);
     }
 }

@@ -99,7 +99,7 @@ $this->title = Yii::$app->name;
                                 <div class="tab-pane fade show active" id="tab4">
                                     <div class="industries-tab-inner">
                                         <?= ListView::widget([
-                                            'summary' => true,
+                                            'summary' => false,
                                             'dataProvider' => $dataProvider,
                                             'itemView' => function ($model, $key, $index, $widget) {
                                                 return $this->render('_list',[
