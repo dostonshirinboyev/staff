@@ -9,19 +9,19 @@ use yii\data\ArrayDataProvider;
 
 class LibraryZiyonetReadRepository
 {
-    public function search(LibraryZiyonetSearchForm $form, $category_id = null)
+    public function search(LibraryZiyonetSearchForm $form, $category_id = null, $page = null)
     {
         $libraryZiyonetDataProvider = (new LibraryZiyonetIntegration())->libraryZiyonetCurl(
             $category_id,
             $form->search_by_name,
             $form->search_by_desc,
-            $form->page,
+            $page
         );
 
         return new ArrayDataProvider([
             'allModels' => $libraryZiyonetDataProvider,
             'pagination' => [
-                'pageSize' => 12
+                'pageSize' => 5,
             ],
         ]);
     }

@@ -13,7 +13,9 @@ return [
         '' => 'site/index',
         '<_a:login|logout|hemis-employee-login|hemis-student-login>' => 'auth/auth/<_a>',
 //        '<_a:lists|list>' => 'library/library-ziyonet/<_a>',
-        'library-ziyonet/lists' => 'library/library-ziyonet/lists',
-        'library-ziyonet/<action:(category-list)>/<id:\d+>'  => 'library/library-ziyonet/<action>',
+        'ziyonet' => 'library/library-ziyonet/lists',
+        'ziyonet/<action:(category-list)>/<id:\d+>'  => 'library/library-ziyonet/<action>',
+        'unilibrary' => 'library/library-unilibrary/lists',
+        'unilibrary/<action:(category-list)>/<id:\d+>'  => 'library/library-unilibrary/<action>',
     ],
 ];
