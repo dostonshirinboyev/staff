@@ -32,13 +32,13 @@ class LibraryUnilibraryController extends Controller
 
     public function actionLists()
     {
-        $page = Yii::$app->request->get('page');
+        //$page = Yii::$app->request->get('page');
         $categorys = $this->libraryCategoryUnilibraryIntegration->libraryUnilibraryCurl();
         $queryParams = Yii::$app->request->queryParams;
         $searchForm = new LibraryUnilibrarySearchForm();
 
         $searchForm->load($queryParams);
-        $dataProvider = $this->libraryUnilibraryReadRepository->search($page);
+        $dataProvider = $this->libraryUnilibraryReadRepository->search();
         return $this->render('lists', [
             'searchForm' => $searchForm,
             'dataProvider' => $dataProvider,
@@ -47,10 +47,12 @@ class LibraryUnilibraryController extends Controller
     }
     public function actionList()
     {
-        $categorys = $this->libraryCategoryUnilibraryIntegration->libraryUnilibraryCurl();
+        $id = Yii::$app->request->get('id');
+        $model = $this->libraryUnilibraryIntegration->libraryUnilibraryCurl($id);
         return $this->render('list', [
-            'categorys' => $categorys
+            'model' => $model
         ]);
+
     }
     public function actionCategory()
     {

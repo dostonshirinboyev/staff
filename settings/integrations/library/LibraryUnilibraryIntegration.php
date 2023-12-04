@@ -15,18 +15,21 @@ class LibraryUnilibraryIntegration
     CONST LANGUAGE_RU  = 'ru';
     CONST LANGUAGE_EN  = 'en';
 
-    public function libraryUnilibraryCurl($page)
+    public function libraryUnilibraryCurl($id = null)
     {
         $curl = new curl\Curl();
 
         $unilibraryParams = [
-            'language'       => self::LANGUAGE_UZ,
-            'page'           => $page
+            'language'       => self::LANGUAGE_UZ
         ];
-
+        if ($id == null) {
+            $listId = null;
+        } else {
+            $listId = '/'.$id;
+        }
         $apiUnilibraryDomain = $this->apiUnilibraryDomain;
 
-        $response = Json::decode($curl->setGetParams($unilibraryParams)->get($apiUnilibraryDomain));
+        $response = Json::decode($curl->setGetParams($unilibraryParams)->get($apiUnilibraryDomain . $listId));
         try {
             return $response['result'];
         } catch (\DomainException $e) {
