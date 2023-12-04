@@ -8,19 +8,17 @@ use yii\data\ArrayDataProvider;
 
 class LibraryUnilibraryReadRepository
 {
-    public function search($page = null)
+    public function search()
     {
-        $libraryUnilibraryDataProvider = (new LibraryUnilibraryIntegration())->libraryUnilibraryCurl(
-            $page
-        );
+        $libraryUnilibraryDataProvider = (new LibraryUnilibraryIntegration())->libraryUnilibraryCurl();
 
         return new ArrayDataProvider([
             'allModels' => $libraryUnilibraryDataProvider['data'],
-            'totalCount' => $libraryUnilibraryDataProvider['total'],
-            'pagination' => [
-                'defaultPageSize' => $libraryUnilibraryDataProvider['to'],
-                'page' => $libraryUnilibraryDataProvider['current_page'],
-            ],
+            //'totalCount' => $libraryUnilibraryDataProvider['total'],
+            //'pagination' => [
+            //    'defaultPageSize' => $libraryUnilibraryDataProvider['to'],
+            //    'page' => $libraryUnilibraryDataProvider['current_page'],
+            //],
         ]);
     }
 }

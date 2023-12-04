@@ -9,6 +9,7 @@ use settings\readModels\library\LibraryZiyonetReadRepository;
 use Yii;
 use yii\base\BaseObject;
 use yii\web\Controller;
+use yii\data\Pagination;
 
 class LibraryZiyonetController extends Controller
 {
@@ -51,6 +52,7 @@ class LibraryZiyonetController extends Controller
     {
         $id = Yii::$app->request->get('id');
         $categorys = $this->libraryCategoryZiyonetIntegration->libraryZiyonetCategoryCurl();
+
         $queryParams = Yii::$app->request->queryParams;
         $searchForm = new LibraryZiyonetSearchForm();
 
@@ -60,12 +62,12 @@ class LibraryZiyonetController extends Controller
         return $this->render('category-list', [
             'searchForm' => $searchForm,
             'dataProvider' => $dataProvider,
-            'categorys' => $categorys
+            'categorys' => $categorys,
         ]);
     }
 
-    public function actionView()
+    public function actionList()
     {
-        return $this->render('view');
+        return $this->render('list');
     }
 }

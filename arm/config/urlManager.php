@@ -16,6 +16,6 @@ return [
         'ziyonet' => 'library/library-ziyonet/lists',
         'ziyonet/<action:(category-list)>/<id:\d+>'  => 'library/library-ziyonet/<action>',
         'unilibrary' => 'library/library-unilibrary/lists',
-        'unilibrary/<action:(category-list)>/<id:\d+>'  => 'library/library-unilibrary/<action>',
+        'unilibrary/<action:(list|category-list)>/<id:\d+>'  => 'library/library-unilibrary/<action>',
     ],
 ];
