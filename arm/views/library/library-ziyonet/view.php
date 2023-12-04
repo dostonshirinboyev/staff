@@ -1,135 +1,161 @@
-<?php
-
-use yii\helpers\Html;
-use yii\grid\GridView;
-use yii\helpers\Url;
-/* @var $this yii\web\View */
-/* @var $searchModel backend\models\BooksSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
-$this->title = 'Books';
-$this->params['breadcrumbs'][] = $this->title;
-
-?>
-<div class="books-index">
-    <section class="breadcrumbs">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="breadcrumb-content">
-                        <p></p>
-                        <h3>Axborot resurs markazi</h3>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="breadcrumb-menu">
-                        <ul>
-                            <li><a href="/">Asosiy</a></li>
-                            <li class="active"><a href="#">Sahifalar</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="blog-area blog-page-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-12">
-                    <div class="blog-sidebar-inner">
-                        <div class="row">
-
-                            <div class="col-lg-12 col-12">
-
-                                    <div class="service-details-main">
-                                        <div class="service-d-list-content">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-12">
-                                                    <div class="service-d-list-left">
-                                                        <h5>Kitob haqida</h5>
-                                                        <p>Title</p>
-                                                        <ul class="service-d-list-inner">
-                                                            <li><i class="far fa-user"></i><b>Muallif:</b> Muallif</li>
-                                                            <li><i class="far fa-language"></i><b>Til:</b> Til </li>
-                                                            <li><i class="far fa-pencil"></i><b>Yozuv:</b> Yozuv</li>
-                                                            <li><i class="far fa-bookmark"></i><b>Nashriyot:</b> Nashriyot</li>
-                                                            <li><i class="far fa-print"></i><b>Chop etilgan yil:</b> Chopetilgan</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="menu-right-btn">
-                                                        <a href="#" class="theme-btn">Online o'qish<i class="far fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="menu-right-btn">
-                                                        <a href="#" class="theme-btn">Yuklab olish<i class="far fa-download"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-12">
-                                                    <div class="service-d-list-right">
-                                                        <p>Image</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="service-details-content">
-                                            <h3>Kitob haqida qisqacha izoh</h3>
-                                            <p>short.</p>
-                                        </div>
-                                    </div>
-
-
+<section class="blog-details-area">
+    <div class="container">
+        <div class="row">
+    <div class="col-lg-9 col-12">
+        <div class="blog-details-inner">
+            <div class="blog-detail-info shadow-custom">
+                <div class="row" style="align-items: center">
+                    <div class="col-lg-4">
+                        <div class="blog-d-head-img">
+                            <div class="product-slider text-center">
+                                <a data-fancybox="product-image" data-src="/books/image/1654065050.png">
+                                    <img src="/books/image/1654065050.png" alt="Homila po'stlog'i barvaqt uzilgan homilador ayollarda homiladorlikni davom ettirishning prognozlash mezonlari">
+                                </a>
                             </div>
-
                         </div>
-                        <div class="row">
-                            <div class="col-12">
-
-
+                        <div class="blog-detail-info">
+                            <div class="blog-d-tag-widget">
+                                <ul>
+                                    <li>
+                                        <a class="btn btn-block" onclick="">
+                                            <i class="fa fa-eye"></i> Online o'qish
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" target="_blank" class="btn btn-block" onclick="">
+                                            <i class="fa fa-download"></i> Yuklab olish
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-
-                    <div class="blog-detail-sidebar">
-
-                        <div class="singles-s-widget">
-                            <form action="#" class="search-widget">
-                                <input type="text" placeholder="Qidiruv ...">
-                                <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
-                            </form>
+                    <div class="col-lg-8 hr-custom">
+                        <div class="blog-d-head-title">
+                            <div class="blog-single-meta">
+                                <ul>
+                                    <li>
+                                        <h3>
+                                            Homila po'stlog'i barvaqt uzilgan homilador ayollarda homiladorlikni davom ettirishning prognozlash mezonlari
+                                        </h3>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-eye"></i><span> 1504 </span> |
+                                        <i class="fa fa-download"></i><span> 410</span>
+                                    </li>
+                                    <li>
+                                        <b>
+                                            Muallif:
+                                        </b>
+                                        Ismailova S. S.
+                                    </li>
+                                    <li>
+                                        <b>
+                                            Til:
+                                        </b>
+                                        o'zbek
+                                    </li>
+                                    <li>
+                                        <b>
+                                            Yozuv:
+                                        </b>
+                                        krill
+                                    </li>
+                                    <li>
+                                        <b>
+                                            Resurs turi:
+                                        </b>
+                                        avtoreferat
+                                    </li>
+                                    <li>
+                                        <b>
+                                            Betlar soni:
+                                        </b>
+                                        57 bet
+                                    </li>
+                                    <li>
+                                        <b>
+                                            Chop etilgan yili:
+                                        </b>
+                                        2021
+                                    </li>
+                                    <li>
+                                        <b>
+                                            Chiqish ma’lumotlari:
+                                        </b>
+                                        Toshkent
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-
-                        <div class="singles-s-widget categories-widget">
-                            <h5 class="widget-title">Asosiy menular</h5>
-
-                            <ul>
-                                Menu
-                            </ul>
-                        </div>
-
-                        <div class="singles-s-widget popular-feeds">
-                            <iframe id="preview" style="border:0px;height:500px;width:350px;margin:5px;box-shadow: 0 0 16px 3px rgba(0,0,0,.2);" src="https://xn--r1a.website/s/samvmiARM"></iframe>
-                        </div>
-
-                        <div class="singles-s-widget socail-widget">
-                            <h5 class="widget-title">Ijtimoiy tarmoqlar</h5>
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-
-
                     </div>
-
                 </div>
             </div>
+            <div class="blog-detail-content shadow-custom">
+                <h4>
+                    Kitob haqida                      </h4>
+                <hr>
+                <p>Kiton haqida qisqacha test.</p>                    </div>
         </div>
-    </section>
+    </div>
+    <div class="col-lg-3 col-md-6 col-12">
+        <div class="blog-detail-sidebar">
 
+            <div class="singles-s-widget socail-widget shadow-custom">
+                <h5 class="widget-title">
+                    Meni skanerlang                        </h5>
+                <img src="#" style="width: 100%; height: auto; background-size: cover;">
+
+                <h5 class="widget-title mt-4">
+                    Bizni kuzatib boring                        </h5>
+                <ul class="text-center">
+                    <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="singles-s-widget service-sidbar-widget service-d-menu shadow-custom">
+                <h3 class="service-d-sidebar-title">
+                    Elektron kutubxona
+                </h3>
+                <ul>
+                    <li>
+                        <a href="/uz/books/educational-literature">
+                            <i class="fas fa-circle-notch"></i>
+                            Menu 1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/uz/books/monographs">
+                            <i class="fas fa-circle-notch"></i>
+                            Menu 2
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/uz/books/fiction">
+                            <i class="fas fa-circle-notch"></i>
+                            Menu 3
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/uz/books/methodical-instructions">
+                            <i class="fas fa-circle-notch"></i>
+                            Menu 4
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="/uz/books/dissertations">
+                            <i class="fas fa-circle-notch"></i>
+                            Menu 5
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
+    </div>
+</section>
