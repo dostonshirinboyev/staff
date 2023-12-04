@@ -13,7 +13,11 @@ use yii\helpers\Url;
 
         <div class="blog2-image">
 <!--        --><?//= Html::img($model['publisher_resource_icon'], ['alt' => '#'])?>
-            <img src="<?=$model["publisher_resource_icon"]?>">
+            <div class="single-service service-4">
+                <div class="service-icon">
+                    <i class="fal fa-book"></i>
+                </div>
+            </div>
             <div class="post-date">
 <!--                --><?//= date('d-M', strtotime($model['created_at']))?><!-- <span>--><?//= date('Y', strtotime($model['created_at']))?><!--</span>-->
             </div>
