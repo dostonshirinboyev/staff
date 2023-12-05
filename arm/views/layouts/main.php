@@ -41,9 +41,9 @@ AppAsset::register($this);
                 <div class="topbar-Social">
                     <ul>
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="active"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="active"><a href="#"><i class="fab fa-telegram"></i></a></li>
                         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
             </div>
