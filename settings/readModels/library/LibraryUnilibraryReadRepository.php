@@ -17,10 +17,10 @@ class LibraryUnilibraryReadRepository
             'allModels' => $libraryUnilibraryDataProvider['data'],
             'totalCount' => $libraryUnilibraryDataProvider['total'],
             'pagination' => [
-                'defaultPageSize' => $libraryUnilibraryDataProvider['to'],
+                'pageSize' => $libraryUnilibraryDataProvider['to'],
+//                'defaultPageSize' => $libraryUnilibraryDataProvider['to'],
 //                'page' => $libraryUnilibraryDataProvider['current_page'],
             ],
         ]);
-        Pagination::
     }
 }
