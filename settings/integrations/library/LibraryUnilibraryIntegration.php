@@ -15,12 +15,13 @@ class LibraryUnilibraryIntegration
     CONST LANGUAGE_RU  = 'ru';
     CONST LANGUAGE_EN  = 'en';
 
-    public function libraryUnilibraryCurl($id = null)
+    public function libraryUnilibraryCurl($id = null, $page = 1)
     {
         $curl = new curl\Curl();
 
         $unilibraryParams = [
-            'language'       => self::LANGUAGE_UZ
+            'language'       => self::LANGUAGE_UZ,
+            'page'           => $page
         ];
         if ($id == null) {
             $listId = null;

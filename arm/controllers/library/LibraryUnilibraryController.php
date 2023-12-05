@@ -38,7 +38,7 @@ class LibraryUnilibraryController extends Controller
         $searchForm = new LibraryUnilibrarySearchForm();
 
         $searchForm->load($queryParams);
-        $dataProvider = $this->libraryUnilibraryReadRepository->search();
+        $dataProvider = $this->libraryUnilibraryReadRepository->search($page);
         return $this->render('lists', [
             'searchForm' => $searchForm,
             'dataProvider' => $dataProvider,
