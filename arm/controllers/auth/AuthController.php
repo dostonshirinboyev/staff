@@ -15,19 +15,16 @@ use yii\base\Exception;
 class AuthController extends Controller
 {
     private $hemisIdAuthService;
-//    private $service;
 
     public function __construct(
         $id,
         $module,
         HemisIdAuthService $hemisIdAuthService,
-//        AuthService $service,
         $config = []
     )
     {
         parent::__construct($id, $module, $config);
         $this->hemisIdAuthService = $hemisIdAuthService;
-//        $this->service = $service;
     }
 
 

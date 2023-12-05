@@ -12,16 +12,33 @@ class AppAuthAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        ['href' => 'css/bootstrap.min.css', 'rel' => 'stylesheet', 'type' => 'text/css'],
-        ['href' => 'https://unicons.iconscout.com/release/v3.0.6/css/line.css', 'rel' => 'stylesheet'],
-        ['href' => 'css/style.css', 'rel' => 'stylesheet', 'type' => 'text/css', 'id' => 'theme-opt'],
-        ['href' => 'css/colors/default.css', 'rel' => 'stylesheet', 'type' => 'text/css', 'id' => 'color-opt']
+        'css/bootstrap.min.css',
+        'css/cube-portfolio.min.css',
+        'css/maginific-popup.min.css',
+        'css/animate.min.css',
+        'css/owl.carousel.min.css',
+        'css/jquery.fancybox.css',
+        'css/fontawesome.min.css',
+        'css/slicknav.min.css',
+        'css/default.css',
+        'css/style.css',
+        'css/responsive.css',
     ];
     public $js = [
+       ['src' => '../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js', 'data-cfasync' => "false"],
+        'js/jquery-3.6.0.min.js',
         'js/bootstrap.bundle.min.js',
-        'js/feather.min.js',
-        'js/switcher.js',
-        'js/plugins.init.js',
-        'js/app.js',
+        'js/owl.carousel.min.js',
+        'js/cube-portfolio.min.js',
+        'js/magnific-popup.min.js',
+        'js/jquery-fancybox.min.js',
+        'js/wow.min.js',
+        'js/waypoints.min.js',
+        'js/jquery.counterup.min.js',
+        'js/finalcountdown.min.js',
+        'js/typed.min.js',
+        'js/jquery.slicknav.min.js',
+        'js/contact-form.js',
+        'js/main.js'
     ];
 }

@@ -56,20 +56,20 @@ return [
         },
 
     ],
-//    'as access' => [
-//        'class' => 'yii\filters\AccessControl',
-//        'except' => [
-//            'auth/auth/login',
-//            'auth/auth/hemis-student-login',
-//            'auth/auth/hemis-employee-login',
-//            'site/index',
-//        ],
-//        'rules' => [
-//            [
-//                'allow' => true,
-//                'roles' => ['@'],
-//            ],
-//        ],
-//    ],
+    'as access' => [
+        'class' => 'yii\filters\AccessControl',
+        'except' => [
+            'auth/auth/login',
+            'auth/auth/hemis-student-login',
+            'auth/auth/hemis-employee-login',
+            'site/index',
+        ],
+        'rules' => [
+            [
+                'allow' => true,
+                'roles' => ['@'],
+            ],
+        ],
+    ],
     'params' => $params,
 ];

@@ -1,3 +1,8 @@
+<?php
+
+use yii\helpers\Html;
+
+?>
 <header class="header header-2">
     <div class="container">
         <div class="row">
@@ -81,7 +86,8 @@
             <div class="col-lg-3 col-md-2 col-12">
 
                 <div class="menu-right-btn">
-                    <a href="contact.html" class="theme-btn">Tizimga kirish<i class="far fa-long-arrow-right"></i></a>
+                    <?= Html::a(Yii::t('app', "Hemis orqali tizimga kirish") . Html::tag('i', '', ['class' => 'far fa-long-arrow-right']), ['auth/auth/login'], ['class' => 'theme-btn'])?>
+<!--                    <a href="contact.html" class="theme-btn">Tizimga kirish<i class="far fa-long-arrow-right"></i></a>-->
                 </div>
             </div>
         </div>
