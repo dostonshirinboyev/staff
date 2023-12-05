@@ -1,10 +1,10 @@
 <?php
 
-
 namespace settings\widgets\menu;
 
+use yii\base\Widget;
 
-class MenuArmWidget
+class MenuArmWidget extends Widget
 {
 
 }
