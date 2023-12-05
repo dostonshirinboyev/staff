@@ -29,6 +29,10 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
+<marquee width="100%" direction="left" >
+    <p style="color: red;">Sayt test rejimida ishlamoqda.</p>
+</marquee>
+
 <div class="topbar">
     <div class="container">
         <div class="row">
@@ -47,8 +51,8 @@ AppAsset::register($this);
 
                 <div class="topbar-Contact">
                     <ul>
-                        <li><a href="#"><i class="far fa-phone"></i>+1 123 456 7894</a></li>
-                        <li><a href="#"><i class="far fa-envelope"></i><span class="__cf_email__" data-cfemail="325b5c545d72574a535f425e571c515d5f">[email&#160;protected]</span></a></li>
+                        <li><a href="#"><i class="far fa-phone"></i>+99866 234-98-73</a></li>
+                        <li><a href="#"><i class="far fa-envelope"></i><span class="__cf_email__" data-cfemail="325b5c545d72574a535f425e571c515d5f">arm@ssuv.uz</span></a></li>
                     </ul>
                 </div>
             </div>

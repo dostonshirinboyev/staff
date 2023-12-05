@@ -22,6 +22,7 @@ return [
         'request' => [
             'csrfParam' => '_csrf-ssuv',
             'cookieValidationKey' => $params['cookieValidationKey'],
+            'baseUrl' => '/ssuv',
         ],
         'user' => [
             'identityClass' => 'common\auth\Identity',
