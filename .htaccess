@@ -8,19 +8,19 @@ RewriteRule /\. - [L,F]
 
 # define the app environment variable
 RewriteCond %{REQUEST_URI} !^/((arm|backend)/web|admin)
-RewriteRule ^ - [E=APP:arm]
-RewriteCond %{REQUEST_URI} (?!^/arm/web)^/admin-panel
+RewriteRule ^ - [E=APP:frontend]
+RewriteCond %{REQUEST_URI} (?!^/backend/web)^/admin-panel
 RewriteRule ^ - [E=APP:backend]
 
 # rewrite the URI of the frontend app
-RewriteCond %{ENV:APP} =arm
+RewriteCond %{ENV:APP} =frontend
 RewriteRule ^ arm/web%{REQUEST_URI}
 # if a directory or a file exists, use the request directly
 # otherwise forward the request to index.php
-RewriteCond %{ENV:APP} =arm
+RewriteCond %{ENV:APP} =frontend
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ arm/web/index.php [L]
+RewriteRule ^ frontend/web/index.php [L]
 
 # redirect to the URL without a trailing slash (uncomment if necessary)
 #RewriteRule ^admin-panel/$ /admin-panel [L,R=301]
@@ -38,4 +38,3 @@ RewriteRule ^ backend/web/index.php [L]
 # handle a directory trailing slash, redirect to the initial URI instead the rewritten one
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [L,R=301]
-

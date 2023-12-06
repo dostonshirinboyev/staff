@@ -8,6 +8,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 
+
 $this->title = Yii::$app->name;
 ?>
 
@@ -57,8 +58,8 @@ $this->title = Yii::$app->name;
                                     </li>
                                     <li class="nav-item">
                                         <a class="animated" href="#tab8" data-bs-toggle="tab">
-                                            <div><i class="far fa-globe"></i></div>
-                                            <div>Advertise & Marketing</div>
+                                            <div><i class="far fa-university"></i></div>
+                                            <div>ARMNING JAVOBGARLIGI</div>
                                         </a>
                                     </li>
                                 </ul>
@@ -83,7 +84,7 @@ $this->title = Yii::$app->name;
                                                     <h6></h6>
                                                     <p>Zamonaviy talablar hisobga olingan holda kutubxona tarmog’ini tashkil qilishni takomillashtirish, o’sib kelayotgan yosh avlodning intelektual extiyojlarini qondirish madaniy, ma’naviy axloqiy qadriyatlarni saqlab qolishga yo’naltirilgan prinspial yangi axborot markazlarini barpo etish, shuningdek aholini yanada kengroq va tizimli axborot bilan taminlash Respublikamiz prizidentimiz  tomonidan 2006-yil 20-iyunda 381-sonli qaror qabul qilindi.</p>
                                                     <div class="industries-content-btn">
-                                                        <a href="contact.html" class="theme-btn primary">BATAFSIL<i class="far fa-long-arrow-right"></i></a>
+                                                        <a href="#" class="theme-btn primary">BATAFSIL<i class="far fa-long-arrow-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -103,11 +104,11 @@ $this->title = Yii::$app->name;
                                             <div class="col-lg-6 col-12">
 
                                                 <div class="industries-content">
-                                                    <h3>Markaz tarixi Donec ut quam in leo tincidunt viverra porta et erat pellentesque dolor</h3>
-                                                    <h6>In malesuada sed enim vel rutrum. Fusce finibus commodo mi ac lacinia. Vestibulum eget interdum mi. Morbi eu mi et eros aliquet efficitur non et est.</h6>
-                                                    <p>Nunc lacinia nisl vel mauris ultrices porta eget nec quam. Curabitur vestibulum ac ipsum at pulvinar. Suspendisse in dui vitae magna tristique blandit eget vitae turpis. Sed et tortor ac massa egestas blandit eu quis mi. Vestibulum gravida sapien vehicula dui efficitur convallis. Sed congue urna diam, at ornare turpis cursus non. Etiam a urna dui. Suspendisse ultrices lobortis urna non imperdiet. Aenean erat neque, varius quis erat vitae, tincidunt ornare ante. Mauris eget libero vehicula, laoreet purus nec, mattis tortor. In iaculis odio at urna semper pharetra. Aenean in augue at ante blandit pharetra venenatis vitae nunc. Ut libero tellus, posuere in mi ut, accumsan semper ex.</p>
+                                                    <h3>Axborot resurs markazi tarixi</h3>
+                                                    <h6></h6>
+                                                    <p>Samarqand davlat veterenariya meditsinasi, chorvachilik va biotexnologiyalari universiteti kutubxonasi 1930 yilning sentyabr oyida tashkil topgan. O'sha yillarda kutubxonaning zaxirasi bir xonani egallab, 3 ta kitob javonini tashkil etgan. Yil sayin kutubxonada kitoblarni saqlash va tarqatish uchun qulay sharoitlar yaratilib turli soha va mutaxassiliklarga bag'ishlangan adabiyotlar soni ko'paytirildi, maxsus kitob javonlari va anjomlar bilan ta'minlash darajasi yaxshilanib va o'quv zali ajratildi Kutubxona  xodimlarining  oldilarida turgan asosiy vazifalardan biri "Uzluksiz ta'lim tizimi uchun o'quv adabiyotlarning yangi avlodini yaratish konsepsiyasi asosida kampyuterlar sonini ko’paytirish, videoaxborot jamlangan videoteka. slaydlar to'plami, diafilm va diapozitivlardan iborat fonotika, noyob va kam sonli adabiyotlarning  elektron  versiyalarini tayyorlash, nusxa ko'chirish xizmatini jadal yo'lga qo'yishdan iborat.</p>
                                                     <div class="industries-content-btn">
-                                                        <a href="contact.html" class="theme-btn primary">Get A Quote<i class="far fa-long-arrow-right"></i></a>
+                                                        <a href="#" class="theme-btn primary">Batafsil<i class="far fa-long-arrow-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -127,11 +128,14 @@ $this->title = Yii::$app->name;
                                             <div class="col-lg-6 col-12">
 
                                                 <div class="industries-content">
-                                                    <h3>me'yoriy hujjatlar Donec ut quam in leo tincidunt viverra porta et erat pellentesque dolor</h3>
-                                                    <h6>In malesuada sed enim vel rutrum. Fusce finibus commodo mi ac lacinia. Vestibulum eget interdum mi. Morbi eu mi et eros aliquet efficitur non et est.</h6>
-                                                    <p>Nunc lacinia nisl vel mauris ultrices porta eget nec quam. Curabitur vestibulum ac ipsum at pulvinar. Suspendisse in dui vitae magna tristique blandit eget vitae turpis. Sed et tortor ac massa egestas blandit eu quis mi. Vestibulum gravida sapien vehicula dui efficitur convallis. Sed congue urna diam, at ornare turpis cursus non. Etiam a urna dui. Suspendisse ultrices lobortis urna non imperdiet. Aenean erat neque, varius quis erat vitae, tincidunt ornare ante. Mauris eget libero vehicula, laoreet purus nec, mattis tortor. In iaculis odio at urna semper pharetra. Aenean in augue at ante blandit pharetra venenatis vitae nunc. Ut libero tellus, posuere in mi ut, accumsan semper ex.</p>
+                                                    <h3>Axborot-resurs markazlari to‘g‘risida</h3>
+                                                    <h6></h6>
+                                                    <p> <strong>1.</strong> Samarqand davlat veterinariya meditsinasi, chorvachilik va biotexnologiyalari universitetining Axborot-resurs markazi (keying o‘rinlarda Axborot resurs-markazi deb ataladi) O‘zbekiston Respublikasi oliy ta’lim tizimida ta’lim va ilim fanni rivojlanish manfaatlari yo‘lida axborot-kutubxona faoliyatini tashkil etuivchi hamda amalga oshiruvchi axborot-kutubxona muassasasi hisoblanadi.<br>
+                                                        <strong>2.</strong> Axborot-resurs markazi universitetining tarkibiy bo‘linmasi sifatida rahbaryatiga bo‘ysunadi.<br>
+                                                        <strong>3.</strong> Axborot-resurs markazi o‘z faoliyatida O‘zbekiston Respublikasi Konstitutsiyasiga, qonunlariga, O‘zbekiston Respublikasi Oliy Majlis palatalarining qarorlariga, O‘zbekiston Respublikasi Prezidentining farmonlari, qarorlari va farmoyishlariga, O‘zbekiston Respublikasi Vazirlar Mahkamasining qarorlari va farmoyishlariga, Oliy va o‘rta maxsus ta’lim vazirligining buyruqlari va Hay’at qarorlariga, universitet Kuzatuv kengashining qarorlariga, shuningdek, universitetining ustavi va universitet rahbaryatining buyruqlari, ichki tartib qoidalari hamda ushbu Nizomga amal qiladi.
+                                                    </p>
                                                     <div class="industries-content-btn">
-                                                        <a href="contact.html" class="theme-btn primary">Get A Quote<i class="far fa-long-arrow-right"></i></a>
+                                                        <a href="#" class="theme-btn primary">Batafsil<i class="far fa-long-arrow-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -151,11 +155,20 @@ $this->title = Yii::$app->name;
                                             <div class="col-lg-6 col-12">
 
                                                 <div class="industries-content">
-                                                    <h3>Armdan foydalanish Donec ut quam in leo tincidunt viverra porta et erat pellentesque dolor</h3>
-                                                    <h6>In malesuada sed enim vel rutrum. Fusce finibus commodo mi ac lacinia. Vestibulum eget interdum mi. Morbi eu mi et eros aliquet efficitur non et est.</h6>
-                                                    <p>Nunc lacinia nisl vel mauris ultrices porta eget nec quam. Curabitur vestibulum ac ipsum at pulvinar. Suspendisse in dui vitae magna tristique blandit eget vitae turpis. Sed et tortor ac massa egestas blandit eu quis mi. Vestibulum gravida sapien vehicula dui efficitur convallis. Sed congue urna diam, at ornare turpis cursus non. Etiam a urna dui. Suspendisse ultrices lobortis urna non imperdiet. Aenean erat neque, varius quis erat vitae, tincidunt ornare ante. Mauris eget libero vehicula, laoreet purus nec, mattis tortor. In iaculis odio at urna semper pharetra. Aenean in augue at ante blandit pharetra venenatis vitae nunc. Ut libero tellus, posuere in mi ut, accumsan semper ex.</p>
+                                                    <h3>Axborot-resurs markazdan foydalanish qoidalari</h3>
+                                                    <h6></h6>
+                                                    <p> <strong>1.</strong> Umumiy qoidalar<br>
+                                                       <strong> 1.1.</strong> Axborot-resurs markazi (ARM) faoliyati demokratiya, insonparvarlik, umumiy foydalanishga qulaylik, umuminsoniy qadriyatlarning ustuvorligi, shaxsning erkin kamol topishi prinsiplariga asoslanadi.<br>
+                                                        <strong>1.2.</strong> ARMdan foydalanish bepul, ARM tomonidan ko‘rsatiladigan pullik xizmatlarning ayrim turlari ro‘yxati, ular uchun to‘lanadigan haq miqdori qonun hujjatlarida belgilanadi.<br>
+                                                        <strong>2.</strong> Foydalanuvchilarning huquq va majburiyatlari<br>
+                                                        <strong>2.1.</strong> ARMdan foydalanish huquqi mazkur Universiteti talabalari, professor-o‘qituvchilar tarkibi, doktorant, aspirantlar, ilmiy-xodimlar, o‘quv yordamchi va muxandis-texnik xodimlarga beriladi.<br>
+                                                        Boshqa Oliy ta’lim muassasalari va shahar hududidagi foydalanuvchilariga ARMning faqat o‘quv zalida axborot xizmati ko‘rsatiladi.<br>
+                                                        <strong>2.2.</strong> Foydalanuvchilar quyidagi huquqlarga ega:<br>
+                                                        - ARM fondidan istalgan hujjatlarni  vaqtincha foydalanish uchun olish, shuningdek boshqa ARMdan hujjatlarning bosma yoki elektron nusxalarini hujjatlarni elektron vositasida etkazib berish  tizimi orqali buyurtma qilish va olish;<br>
+                                                        - bibliografik, ma’lumotnoma-axborot xizmatidan hamda ARM tomonidan ko‘rsatiladigan xizmatlarning boshqa turlaridan foydalanish;<br>
+                                                    </p>
                                                     <div class="industries-content-btn">
-                                                        <a href="contact.html" class="theme-btn primary">Get A Quote<i class="far fa-long-arrow-right"></i></a>
+                                                        <a href="#" class="theme-btn primary">Batafsil<i class="far fa-long-arrow-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -175,11 +188,17 @@ $this->title = Yii::$app->name;
                                             <div class="col-lg-6 col-12">
 
                                                 <div class="industries-content">
-                                                    <h3>Donec ut quam in leo tincidunt viverra porta et erat pellentesque dolor</h3>
-                                                    <h6>In malesuada sed enim vel rutrum. Fusce finibus commodo mi ac lacinia. Vestibulum eget interdum mi. Morbi eu mi et eros aliquet efficitur non et est.</h6>
-                                                    <p>Nunc lacinia nisl vel mauris ultrices porta eget nec quam. Curabitur vestibulum ac ipsum at pulvinar. Suspendisse in dui vitae magna tristique blandit eget vitae turpis. Sed et tortor ac massa egestas blandit eu quis mi. Vestibulum gravida sapien vehicula dui efficitur convallis. Sed congue urna diam, at ornare turpis cursus non. Etiam a urna dui. Suspendisse ultrices lobortis urna non imperdiet. Aenean erat neque, varius quis erat vitae, tincidunt ornare ante. Mauris eget libero vehicula, laoreet purus nec, mattis tortor. In iaculis odio at urna semper pharetra. Aenean in augue at ante blandit pharetra venenatis vitae nunc. Ut libero tellus, posuere in mi ut, accumsan semper ex.</p>
+                                                    <h3>ARMning huqulari va javobgarligi</h3>
+                                                    <h6></h6>
+                                                    <p>Axborot-resurs markazi quyidagi huquqlarga ega:<br>
+                                                        “Axborot-kutubxona faoliyati to‘g‘risida”gi O‘zbekiston Respublikasi Qonuniga va ushbu Nizomga muvofiq o‘z axborot-kutubxona faoliyatining mazmuni va aniq shakllarini belgilash;
+                                                        Universitetni bo‘limlari, fakultetlari, kafedralari bilan o‘quv, ilmiy-metodik va ilmiy-tadqiqot masalalari bo‘yicha ishlab chiqiladigan qoidalar, nizomlar, yo‘riqnomalar, o‘quv dasturlari va boshqa normativ hujjatlarni kelishish;
+                                                        tasdiqlangan xizmatlar ro‘yxati va narxlar preyskurantlariga muvofiq axborot-kommunikatsiya texnologiyalari asosida pulli xizmatlari ko‘rsatish;
+                                                        axborot-kutubxona fondlarini va axborot-kutubxona resurslarini saqlash, ulardan foydalanishning alohida shart-sharoitlarini belgilash;
+                                                        foydalanuvchilar tomonidan Axborot-resurs markaziga yetkazilgan zararni qonunchilikka va Axborot-resurs markazidan foydalanish qoidalariga muvofiq qoplash turlari va miqdorlarini belgilash;
+                                                    </p>
                                                     <div class="industries-content-btn">
-                                                        <a href="contact.html" class="theme-btn primary">Get A Quote<i class="far fa-long-arrow-right"></i></a>
+                                                        <a href="#" class="theme-btn primary">Batafsil<i class="far fa-long-arrow-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
