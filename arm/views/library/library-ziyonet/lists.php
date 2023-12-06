@@ -28,14 +28,14 @@ $this->title = Yii::$app->name;
                                     <a href="/">E-library</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/site/unilibrary">Unilibrary</a>
+                                    <a href="/unilibrary">Unilibrary</a>
 
                                 </li>
                                 <li class="nav-item">
                                     <?=Html::a(Yii::t('app', "ZiyoNET"), ['lists'], ['class' => 'animated shadow-lg active'])?>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/site/milliy">Milliy kutubxona</a>
+                                    <a href="/#">Milliy kutubxona</a>
                                 </li>
                             </ul>
                         </div>
