@@ -43,31 +43,31 @@ class TestController extends Controller
             [
                 'title_oz' => "MARKAZ",
                 'title_uz' => "МAРКAЗ",
-                'title_ru' => "MARKAZ",
+                'title_ru' => "ЦЕНТР",
                 'title_en' => "MARKAZ",
                 'sub_menu' => [
                     [
                         'title_oz' => "MARKAZ HAQIDA",
                         'title_uz' => "МAРКAЗ ҲAҚИДA",
-                        'title_ru' => "MARKAZ HAQIDA",
+                        'title_ru' => "О ЦЕНТРЕ",
                         'title_en' => "MARKAZ HAQIDA",
                     ],
                     [
                         'title_oz' => "MARKAZ TARIXI",
                         'title_uz' => "МAРКAЗ ТAРИХИ",
-                        'title_ru' => "MARKAZ TARIXI",
+                        'title_ru' => "ИСТОРИЯ ЦЕНТРА",
                         'title_en' => "MARKAZ TARIXI",
                     ],
                     [
                         'title_oz' => "ME'YORIY HUJJATLAR",
                         'title_uz' => "МЕъЙОРИЙ ҲУЖЖAТЛAР",
-                        'title_ru' => "ME'YORIY HUJJATLAR",
+                        'title_ru' => "НОРМАТИВНЫЕ ДОКУМЕНТЫ",
                         'title_en' => "ME'YORIY HUJJATLAR",
                     ],
                     [
                         'title_oz' => "ARM DAN FOYDALANISH QOIDALARI",
                         'title_uz' => "AРМ ДAН ФОЙДAЛAНИСҲ ҚОИДAЛAРИ",
-                        'title_ru' => "ARM DAN FOYDALANISH QOIDALARI",
+                        'title_ru' => "ПРАВИЛА ИСПОЛЬЗОВАНИЯ ОРУЖИЯ",
                         'title_en' => "ARM DAN FOYDALANISH QOIDALARI",
                     ]
                 ]
@@ -75,7 +75,7 @@ class TestController extends Controller
             [
                 'title_oz' => "ARM BO'LIMLARI",
                 'title_uz' => "AРМ БЎЛИМЛAРИ",
-                'title_ru' => "ARM BO'LIMLARI",
+                'title_ru' => "АРМЕЙСКИЕ ОТДЕЛЕНИЯ",
                 'title_en' => "ARM BO'LIMLARI",
                 'sub_menu' => [
                     [
