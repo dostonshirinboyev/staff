@@ -56,7 +56,7 @@ return [
         },
 
     ],
-    'as access' => [
+    /*'as access' => [
         'class' => 'yii\filters\AccessControl',
         'except' => [
             'auth/auth/login',
@@ -69,6 +69,6 @@ return [
                 'roles' => ['@'],
             ],
         ],
-    ],
+    ],*/
     'params' => $params,
 ];
