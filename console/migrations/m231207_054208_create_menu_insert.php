@@ -1,44 +1,18 @@
 <?php
 
-namespace arm\controllers;
-use settings\forms\library\search\LibraryZiyonetSearchForm;
-use settings\integrations\library\LibraryCategoryZiyonetIntegration;
-use settings\integrations\library\LibraryZiyonetIntegration;
-use settings\integrations\library\unilibrary\UnilibraryBookIntegration;
-use settings\readModels\library\LibraryZiyonetReadRepository;
-use Yii;
-use yii\web\Controller;
+use yii\db\Migration;
+use yii\helpers\Console;
 
-class TestController extends Controller
+/**
+ * Class m231207_054208_create_menu_insert
+ */
+class m231207_054208_create_menu_insert extends Migration
 {
-    private $libraryCategoryZiyonetIntegration;
-    private $libraryZiyonetIntegration;
-    private $libraryZiyonetReadRepository;
-
-    public function __construct(
-        $id,
-        $module,
-        LibraryCategoryZiyonetIntegration  $libraryCategoryZiyonetIntegration,
-        LibraryZiyonetIntegration          $libraryZiyonetIntegration,
-        LibraryZiyonetReadRepository       $libraryZiyonetReadRepository,
-        $config = [])
+    /**
+     * {@inheritdoc}
+     */
+    public function safeUp()
     {
-        parent::__construct($id, $module, $config);
-        $this->libraryCategoryZiyonetIntegration = $libraryCategoryZiyonetIntegration;
-        $this->libraryZiyonetIntegration         = $libraryZiyonetIntegration;
-        $this->libraryZiyonetReadRepository      = $libraryZiyonetReadRepository;
-    }
-
-//    public function actionIndex(){
-////        $ziyonetCategory = $this->ziyonetBookCategoryIntegration->ziyonetBookCategoryCurl();
-////        echo "<pre>";
-////        print_r($ziyonetCategory); die();
-//
-//        $ziyonetBook = $this->libraryZiyonetIntegration->libraryZiyonetCurl();
-//        echo "<pre>";
-//        print_r($ziyonetBook); die();
-//    }
-    public function actionIndex(){
         $menus = [
             [
                 'title_oz' => "MARKAZ",
@@ -193,32 +167,28 @@ class TestController extends Controller
                 ]
             ],
         ];
-        foreach ($menus as $key => $menu) {
-            echo $menu['title_oz']."<br>";
-            echo $menu['title_uz']."<br>";
-            echo $menu['title_ru']."<br>";
-            echo $menu['title_en']."<br>";
 
-                foreach ($menu['sub_menu'] as $subMenu) {
-                    echo $subMenu['title_oz']."<br>";
-                    echo $subMenu['title_uz']."<br>";
-                    echo $subMenu['title_ru']."<br>";
-                    echo $subMenu['title_en']."<br>";
-                }
+        foreach ($menus as $key => $menu) {
+            try {
+                Yii::$app->db
+                    ->createCommand()
+                    ->batchInsert('public.menu', ['parent_id', 'category_id', 'title_uz', 'title_oz', 'title_ru', 'title_en', 'code_name', 'order', 'status', 'is_deleted', 'created_by', 'created_at'], [
+                        [null, 1, "{$menu['title_uz']}", "{$menu['title_oz']}", "{$menu['title_ru']}", "{$menu['title_en']}", "{$menu['title_en']}", $key + 1.000, 1, 0, 4, date("Y-m-d H:i:s")]
+                    ])
+                    ->execute();
+            } catch (\yii\db\Exception $e) {
+                echo $e->getMessage();
+            }
         }
     }
 
-    public function actionZiyonet(): string
+    /**
+     * {@inheritdoc}
+     */
+    public function safeDown()
     {
-        $queryParams = Yii::$app->request->queryParams;
-        $searchForm = new LibraryZiyonetSearchForm();
+        echo "m231207_054208_create_menu_insert cannot be reverted.\n";
 
-        $searchForm->load($queryParams);
-        $dataProvider = $this->libraryZiyonetReadRepository->search($searchForm);
-
-        return $this->render('lists', [
-            'searchForm' => $searchForm,
-            'dataProvider' => $dataProvider,
-        ]);
+        return false;
     }
 }
