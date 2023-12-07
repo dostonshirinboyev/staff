@@ -1,45 +1,16 @@
 <?php
 
-namespace arm\controllers;
 use settings\entities\menu\Menu;
-use settings\forms\library\search\LibraryZiyonetSearchForm;
-use settings\integrations\library\LibraryCategoryZiyonetIntegration;
-use settings\integrations\library\LibraryZiyonetIntegration;
-use settings\integrations\library\unilibrary\UnilibraryBookIntegration;
-use settings\readModels\library\LibraryZiyonetReadRepository;
-use Yii;
-use yii\web\Controller;
+use yii\db\Migration;
+use yii\helpers\Console;
 
-class TestController extends Controller
+/**
+ * Class m231207_054208_create_menu_insert
+ */
+class m231207_054208_create_menu_insert extends Migration
 {
-    private $libraryCategoryZiyonetIntegration;
-    private $libraryZiyonetIntegration;
-    private $libraryZiyonetReadRepository;
-
-    public function __construct(
-        $id,
-        $module,
-        LibraryCategoryZiyonetIntegration  $libraryCategoryZiyonetIntegration,
-        LibraryZiyonetIntegration          $libraryZiyonetIntegration,
-        LibraryZiyonetReadRepository       $libraryZiyonetReadRepository,
-        $config = [])
+    public function createSave()
     {
-        parent::__construct($id, $module, $config);
-        $this->libraryCategoryZiyonetIntegration = $libraryCategoryZiyonetIntegration;
-        $this->libraryZiyonetIntegration         = $libraryZiyonetIntegration;
-        $this->libraryZiyonetReadRepository      = $libraryZiyonetReadRepository;
-    }
-
-//    public function actionIndex(){
-////        $ziyonetCategory = $this->ziyonetBookCategoryIntegration->ziyonetBookCategoryCurl();
-////        echo "<pre>";
-////        print_r($ziyonetCategory); die();
-//
-//        $ziyonetBook = $this->libraryZiyonetIntegration->libraryZiyonetCurl();
-//        echo "<pre>";
-//        print_r($ziyonetBook); die();
-//    }
-    public function actionIndex(){
         $menus = [
             [
                 'title_oz' => "MARKAZ",
@@ -194,57 +165,84 @@ class TestController extends Controller
                 ]
             ],
         ];
-        foreach ($menus as $key => $menu) {
-            $test = Yii::$app->db
-                ->createCommand()
-                ->batchInsert('public.menu', ['parent_id', 'category_id', 'title_uz', 'title_oz', 'title_ru', 'title_en', 'code_name', 'order', 'status', 'is_deleted', 'created_by', 'created_at'], [
-                    [null, 1, "{$menu['title_uz']}", "{$menu['title_oz']}", "{$menu['title_ru']}", "{$menu['title_en']}", "{$menu['title_en']}", $key + 1.000, 1, 0, 4, date("Y-m-d H:i:s")]
-                ])
-                ->execute();
 
+        foreach ($menus as $keys => $menu) {
             Yii::$app->db
                 ->createCommand()
-                ->batchInsert('public.menu', ['parent_id', 'category_id', 'title_uz', 'title_oz', 'title_ru', 'title_en', 'code_name', 'order', 'status', 'is_deleted', 'created_by', 'created_at'], [
-                    [null, 1, "{$menu['title_uz']}", "{$menu['title_oz']}", "{$menu['title_ru']}", "{$menu['title_en']}", "{$menu['title_en']}", $key + 1.000, 1, 0, 4, date("Y-m-d H:i:s")]
-                ])
-                ->execute();
+                ->batchInsert('public.menu', [
+                    'category_id',
+                    'title_uz',
+                    'title_oz',
+                    'title_ru',
+                    'title_en',
+                    'code_name',
+                    'order',
+                    'created_by',
+                    'created_at'
+                ],
+                [
+                    [
+                        1,
+                        "{$menu['title_uz']}",
+                        "{$menu['title_oz']}",
+                        "{$menu['title_ru']}",
+                        "{$menu['title_en']}",
+                        "{$menu['title_en']}",
+                        $keys+1 . "000",
+                        4,
+                        date("Y-m-d H:i:s")
+                    ]
+                ]
+            )->execute();
+            $parentId = Yii::$app->db->getLastInsertID();
 
-            $id = Yii::$app->db->getLastInsertID();
-            echo "<pre>";
-            print_r($id);
-
-//            $model = new Menu();
-//            $model->category_id  = 1;
-//            $model->title_uz     = $menu['title_uz'];
-//            $model->title_oz     = $menu['title_oz'];
-//            $model->title_ru     = $menu['title_ru'];
-//            $model->title_en     = $menu['title_en'];
-//            $model->code_name    = $menu['title_en'];
-//            $model->order        = $key+1 . "000";
-//            $model->created_by   = 4;
-//            $model->created_at   = date("Y-m-d H:i:s");
-//            if ($model->validate()) {
-//                echo "<pre>";
-//                print_r($model->getAttributes());
-//            } else {
-//                echo "<pre>";
-//                print_r($model->getErrors());
-//            }
+            foreach ($menu['sub_menu'] as $key => $subMenu) {
+                Yii::$app->db
+                    ->createCommand()
+                    ->batchInsert('public.menu', [
+                        'parent_id',
+                        'category_id',
+                        'title_uz',
+                        'title_oz',
+                        'title_ru',
+                        'title_en',
+                        'code_name',
+                        'order',
+                        'created_by',
+                        'created_at'
+                    ],
+                    [
+                        [
+                            $parentId,
+                            1,
+                            "{$subMenu['title_uz']}",
+                            "{$subMenu['title_oz']}",
+                            "{$subMenu['title_ru']}",
+                            "{$subMenu['title_en']}",
+                            "{$subMenu['title_en']}",
+                            $key+1 . "00",
+                            4,
+                            date("Y-m-d H:i:s")
+                        ]
+                    ]
+                )->execute();
+            }
         }
-
+    }
+    /**
+     * {@inheritdoc}
+     */
+    public function safeUp()
+    {
+        $this->createSave();
     }
 
-    public function actionZiyonet(): string
+    /**
+     * {@inheritdoc}
+     */
+    public function safeDown()
     {
-        $queryParams = Yii::$app->request->queryParams;
-        $searchForm = new LibraryZiyonetSearchForm();
-
-        $searchForm->load($queryParams);
-        $dataProvider = $this->libraryZiyonetReadRepository->search($searchForm);
-
-        return $this->render('lists', [
-            'searchForm' => $searchForm,
-            'dataProvider' => $dataProvider,
-        ]);
+        $this->execute("DELETE FROM public.menu;");
+        $this->execute("TRUNCATE public.menu RESTART IDENTITY CASCADE;");
     }
 }
