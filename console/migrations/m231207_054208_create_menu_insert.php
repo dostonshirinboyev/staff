@@ -1,5 +1,6 @@
 <?php
 
+use settings\entities\menu\Menu;
 use yii\db\Migration;
 use yii\helpers\Console;
 
@@ -8,10 +9,7 @@ use yii\helpers\Console;
  */
 class m231207_054208_create_menu_insert extends Migration
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function safeUp()
+    public function createSave()
     {
         $menus = [
             [
@@ -168,18 +166,75 @@ class m231207_054208_create_menu_insert extends Migration
             ],
         ];
 
-        foreach ($menus as $key => $menu) {
-            try {
+        foreach ($menus as $keys => $menu) {
+            Yii::$app->db
+                ->createCommand()
+                ->batchInsert('public.menu', [
+                    'category_id',
+                    'title_uz',
+                    'title_oz',
+                    'title_ru',
+                    'title_en',
+                    'code_name',
+                    'order',
+                    'created_by',
+                    'created_at'
+                ],
+                [
+                    [
+                        1,
+                        "{$menu['title_uz']}",
+                        "{$menu['title_oz']}",
+                        "{$menu['title_ru']}",
+                        "{$menu['title_en']}",
+                        "{$menu['title_en']}",
+                        $keys+1 . "000",
+                        4,
+                        date("Y-m-d H:i:s")
+                    ]
+                ]
+            )->execute();
+            $parentId = Yii::$app->db->getLastInsertID();
+
+            foreach ($menu['sub_menu'] as $key => $subMenu) {
                 Yii::$app->db
                     ->createCommand()
-                    ->batchInsert('public.menu', ['parent_id', 'category_id', 'title_uz', 'title_oz', 'title_ru', 'title_en', 'code_name', 'order', 'status', 'is_deleted', 'created_by', 'created_at'], [
-                        [null, 1, "{$menu['title_uz']}", "{$menu['title_oz']}", "{$menu['title_ru']}", "{$menu['title_en']}", "{$menu['title_en']}", $key + 1.000, 1, 0, 4, date("Y-m-d H:i:s")]
-                    ])
-                    ->execute();
-            } catch (\yii\db\Exception $e) {
-                echo $e->getMessage();
+                    ->batchInsert('public.menu', [
+                        'parent_id',
+                        'category_id',
+                        'title_uz',
+                        'title_oz',
+                        'title_ru',
+                        'title_en',
+                        'code_name',
+                        'order',
+                        'created_by',
+                        'created_at'
+                    ],
+                    [
+                        [
+                            $parentId,
+                            1,
+                            "{$subMenu['title_uz']}",
+                            "{$subMenu['title_oz']}",
+                            "{$subMenu['title_ru']}",
+                            "{$subMenu['title_en']}",
+                            "{$subMenu['title_en']}",
+                            $key+1 . "00",
+                            4,
+                            date("Y-m-d H:i:s")
+                        ]
+                    ]
+                )->execute();
             }
         }
+    }
+    /**
+     * {@inheritdoc}
+     */
+    public function safeUp()
+    {
+        $this->createSave();
     }
 
     /**
@@ -187,8 +242,7 @@ class m231207_054208_create_menu_insert extends Migration
      */
     public function safeDown()
     {
-        echo "m231207_054208_create_menu_insert cannot be reverted.\n";
-
-        return false;
+        $this->execute("DELETE FROM public.menu;");
+        $this->execute("TRUNCATE public.menu RESTART IDENTITY CASCADE;");
     }
 }

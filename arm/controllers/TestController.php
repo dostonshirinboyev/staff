@@ -1,6 +1,7 @@
 <?php
 
 namespace arm\controllers;
+use settings\entities\menu\Menu;
 use settings\forms\library\search\LibraryZiyonetSearchForm;
 use settings\integrations\library\LibraryCategoryZiyonetIntegration;
 use settings\integrations\library\LibraryZiyonetIntegration;
@@ -194,18 +195,43 @@ class TestController extends Controller
             ],
         ];
         foreach ($menus as $key => $menu) {
-            echo $menu['title_oz']."<br>";
-            echo $menu['title_uz']."<br>";
-            echo $menu['title_ru']."<br>";
-            echo $menu['title_en']."<br>";
+            $test = Yii::$app->db
+                ->createCommand()
+                ->batchInsert('public.menu', ['parent_id', 'category_id', 'title_uz', 'title_oz', 'title_ru', 'title_en', 'code_name', 'order', 'status', 'is_deleted', 'created_by', 'created_at'], [
+                    [null, 1, "{$menu['title_uz']}", "{$menu['title_oz']}", "{$menu['title_ru']}", "{$menu['title_en']}", "{$menu['title_en']}", $key + 1.000, 1, 0, 4, date("Y-m-d H:i:s")]
+                ])
+                ->execute();
 
-                foreach ($menu['sub_menu'] as $subMenu) {
-                    echo $subMenu['title_oz']."<br>";
-                    echo $subMenu['title_uz']."<br>";
-                    echo $subMenu['title_ru']."<br>";
-                    echo $subMenu['title_en']."<br>";
-                }
+            Yii::$app->db
+                ->createCommand()
+                ->batchInsert('public.menu', ['parent_id', 'category_id', 'title_uz', 'title_oz', 'title_ru', 'title_en', 'code_name', 'order', 'status', 'is_deleted', 'created_by', 'created_at'], [
+                    [null, 1, "{$menu['title_uz']}", "{$menu['title_oz']}", "{$menu['title_ru']}", "{$menu['title_en']}", "{$menu['title_en']}", $key + 1.000, 1, 0, 4, date("Y-m-d H:i:s")]
+                ])
+                ->execute();
+
+            $id = Yii::$app->db->getLastInsertID();
+            echo "<pre>";
+            print_r($id);
+
+//            $model = new Menu();
+//            $model->category_id  = 1;
+//            $model->title_uz     = $menu['title_uz'];
+//            $model->title_oz     = $menu['title_oz'];
+//            $model->title_ru     = $menu['title_ru'];
+//            $model->title_en     = $menu['title_en'];
+//            $model->code_name    = $menu['title_en'];
+//            $model->order        = $key+1 . "000";
+//            $model->created_by   = 4;
+//            $model->created_at   = date("Y-m-d H:i:s");
+//            if ($model->validate()) {
+//                echo "<pre>";
+//                print_r($model->getAttributes());
+//            } else {
+//                echo "<pre>";
+//                print_r($model->getErrors());
+//            }
         }
+
     }
 
     public function actionZiyonet(): string
