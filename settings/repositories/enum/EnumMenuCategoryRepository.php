@@ -22,6 +22,16 @@ class EnumMenuCategoryRepository
     }
 
     /**
+     * @param $codeName
+     * @return array|EnumMenuCategory|ActiveRecord|null
+     * @throws NotFoundException
+     */
+    public function getCodeName($codeName)
+    {
+        return $this->getBy(['code_name' => $codeName]);
+    }
+
+    /**
      * @return array|EnumMenuCategory[]|ActiveRecord[]
      */
     public static function findAllForSelect(): array

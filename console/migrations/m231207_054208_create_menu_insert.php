@@ -1,6 +1,7 @@
 <?php
 
 use settings\entities\menu\Menu;
+use settings\repositories\enum\EnumMenuCategoryRepository;
 use yii\db\Migration;
 use yii\helpers\Console;
 
@@ -9,7 +10,10 @@ use yii\helpers\Console;
  */
 class m231207_054208_create_menu_insert extends Migration
 {
-    public function createSave()
+    /**
+     * {@inheritdoc}
+     */
+    public function safeUp()
     {
         $menus = [
             [
@@ -165,7 +169,7 @@ class m231207_054208_create_menu_insert extends Migration
                 ]
             ],
         ];
-
+        $categoryId = (new EnumMenuCategoryRepository())->getCodeName('arm_menu');
         foreach ($menus as $keys => $menu) {
             Yii::$app->db
                 ->createCommand()
@@ -180,20 +184,20 @@ class m231207_054208_create_menu_insert extends Migration
                     'created_by',
                     'created_at'
                 ],
-                [
                     [
-                        1,
-                        "{$menu['title_uz']}",
-                        "{$menu['title_oz']}",
-                        "{$menu['title_ru']}",
-                        "{$menu['title_en']}",
-                        "{$menu['title_en']}",
-                        $keys+1 . "000",
-                        4,
-                        date("Y-m-d H:i:s")
+                        [
+                            $categoryId->id,
+                            "{$menu['title_uz']}",
+                            "{$menu['title_oz']}",
+                            "{$menu['title_ru']}",
+                            "{$menu['title_en']}",
+                            "{$menu['title_en']}",
+                            $keys+1 . "000",
+                            4,
+                            date("Y-m-d H:i:s")
+                        ]
                     ]
-                ]
-            )->execute();
+                )->execute();
             $parentId = Yii::$app->db->getLastInsertID();
 
             foreach ($menu['sub_menu'] as $key => $subMenu) {
@@ -214,7 +218,7 @@ class m231207_054208_create_menu_insert extends Migration
                     [
                         [
                             $parentId,
-                            1,
+                            $categoryId->id,
                             "{$subMenu['title_uz']}",
                             "{$subMenu['title_oz']}",
                             "{$subMenu['title_ru']}",
@@ -225,16 +229,9 @@ class m231207_054208_create_menu_insert extends Migration
                             date("Y-m-d H:i:s")
                         ]
                     ]
-                )->execute();
+                    )->execute();
             }
         }
-    }
-    /**
-     * {@inheritdoc}
-     */
-    public function safeUp()
-    {
-        $this->createSave();
     }
 
     /**
