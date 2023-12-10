@@ -11,7 +11,7 @@ return [
     'cache' => false,
     'rules' => [
         '' => 'site/index',
-        '<_a:login|logout|hemis-employee-login|hemis-student-login>' => 'auth/auth/<_a>',
+        '<_a:login|logout|employee-login|teacher-login|student-login>' => 'auth/auth/<_a>',
 //        '<_a:lists|list>' => 'library/library-ziyonet/<_a>',
         'ziyonet' => 'library/library-ziyonet/lists',
         'ziyonet/<action:(category-list)>/<id:\d+>'  => 'library/library-ziyonet/<action>',

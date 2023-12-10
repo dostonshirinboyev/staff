@@ -34,8 +34,9 @@ class AuthController extends Controller
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [
-                    'hemis-student-login' => ['get'],
-                    'hemis-employee-login' => ['get'],
+                    'employee-login' => ['get'],
+                    'teacher-login'  => ['get'],
+                    'student-login'  => ['get'],
                 ],
             ],
         ];
@@ -74,12 +75,12 @@ class AuthController extends Controller
      * @throws Exception
      * @throws Throwable
      */
-    public function actionHemisStudentLogin(): Response
+    public function actionEmployeeLogin()
     {
         $code = Yii::$app->request->get('code');
         $state = Yii::$app->request->get('state');
         try {
-            $user = $this->hemisIdAuthService->authStudent($code, $state);
+            $user = $this->hemisIdAuthService->authEmployee($code, $state);
             Yii::$app->user->login(new Identity($user), 86400);
             return $this->goBack();
         } catch (\DomainException $e) {
@@ -87,13 +88,25 @@ class AuthController extends Controller
         }
     }
 
-
-    public function actionHemisEmployeeLogin()
+    public function actionTeacherLogin()
     {
         $code = Yii::$app->request->get('code');
         $state = Yii::$app->request->get('state');
         try {
             $user = $this->hemisIdAuthService->authEmployee($code, $state);
+            Yii::$app->user->login(new Identity($user), 86400);
+            return $this->goBack();
+        } catch (\DomainException $e) {
+            throw new BadRequestHttpException($e->getMessage(), 0, $e);
+        }
+    }
+
+    public function actionStudentLogin(): Response
+    {
+        $code = Yii::$app->request->get('code');
+        $state = Yii::$app->request->get('state');
+        try {
+            $user = $this->hemisIdAuthService->authStudent($code, $state);
             Yii::$app->user->login(new Identity($user), 86400);
             return $this->goBack();
         } catch (\DomainException $e) {

@@ -96,10 +96,12 @@ class HemisIdAuthService
             } else {
                 $hemisData = $hemisEmployee['data']['items'][0];
             }
-            $this->roles->assign($user->id, $hemisUserData['type']);
+//            foreach ($hemisUserData['roles'] as $role) {
+//                $this->roles->assign($user->id, $role['code']);
+//            }
             $userPersonalData = $this->userPersonalData->find($user->id);
             $userPersonalNetwork = $this->userPersonalNetwork->find($user->id);
-            if ($userPersonalData === null && $userPersonalNetwork === null) {
+            if ($userPersonalData === null   && $userPersonalNetwork === null) {
                 $userPersonalData = UserPersonalData::createAuthHemis(
                     $user->id,
                     $hemisUserData['firstname'],

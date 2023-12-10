@@ -60,8 +60,9 @@ return [
         'class' => 'yii\filters\AccessControl',
         'except' => [
             'auth/auth/login',
-            'auth/auth/hemis-student-login',
-            'auth/auth/hemis-employee-login',
+            'auth/auth/teacher-login',
+            'auth/auth/employee-login',
+            'auth/auth/student-login',
             'site/index',
         ],
         'rules' => [
