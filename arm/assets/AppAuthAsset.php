@@ -25,7 +25,7 @@ class AppAuthAsset extends AssetBundle
         'css/responsive.css',
     ];
     public $js = [
-       ['src' => '../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js', 'data-cfasync' => "false"],
+//       ['src' => '../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js', 'data-cfasync' => "false"],
         'js/jquery-3.6.0.min.js',
         'js/bootstrap.bundle.min.js',
         'js/owl.carousel.min.js',

@@ -1,30 +1,65 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 ?>
-<h4 class="card-title text-center">HemisID orqali kiring</h4>
-<div class="row">
-    <div class="col-6 mt-3">
-        <?= Html::beginForm(['hemis-employee-login'], 'get', ['class' => 'd-grid'])
-            . Html::submitButton(
-      Html::img('@web/logo/teacher.png', ['class' =>'text-primary', 'alt' => Yii::t('app',"O'qituvchi"), 'style' => 'height: 50px']) .' '. Yii::t('app', "O'qituvchi"),
-                ['class' => 'btn btn-light']
-            )
-            . Html::endForm()
-        ?>
-    </div><!--end col-->
+<section class="contact-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <?= Html::tag('h3', Yii::t('app', "HemisID orqali kirish"));?>
+                    <?= Html::tag('p', Yii::t('app', "Tizimga Samarqand davlat veterinariya meditsinasi, chorvachilik va bitexnologiyalar universiteti <br> axborot resurs markazidan berilgan HemisID va parol orqali kiriladi."));?>
+                    <div class="heading-divider"></div>
+                </div>
+                <div class="contact-details">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="single-c-details">
+                                <?= Html::beginForm(['employee-login'], 'get')
+                                    . Html::submitButton(
+                                        Html::tag('i', '', ['class' => 'fas fa-user-tie']),
+                                    ['class' => 'contact-d-icon'])
+                                    . Html::endForm()
+                                ?>
+                                <div class="contact-d-content">
+                                    <?= Html::tag('h3', Yii::t('app', "Hodim"))?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
 
-    <div class="col-6 mt-3">
-        <?= Html::beginForm(['hemis-student-login'], 'get', ['class' => 'd-grid'])
-        . Html::submitButton(
-            Html::img('@web/logo/student.png', ['class' =>'text-primary', 'alt' => Yii::t('app',"Talaba"), 'style' => 'height: 50px']) .' '. Yii::t('app', "Talaba"),
-            ['class' => 'btn btn-light']
-        )
-        . Html::endForm()
-        ?>
-    </div><!--end col-->
-    <div class="col-12 mt-4">
-        <?= Html::tag('div', Html::a(Html::tag('i', '', ['class' => 'mdi mdi-home text-primary']).' '.Yii::t('app', "Bosh sahifaga qaytish"), '/', ['class' => 'btn btn-light']), ['class' => 'd-grid'])?>
+                            <div class="single-c-details active">
+                                <?= Html::beginForm(['teacher-login'], 'POST')
+                                    . Html::submitButton(
+                                        Html::tag('i', '', ['class' => 'fas fa-chalkboard-teacher']),
+                                        ['class' => 'contact-d-icon'])
+                                    . Html::endForm()
+                                ?>
+                                <div class="contact-d-content">
+                                    <?= Html::tag('h3', Yii::t('app', "O'qituvchi"))?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+
+                            <div class="single-c-details">
+                                <?= Html::beginForm(['student-login'], 'POST')
+                                    . Html::submitButton(
+                                        Html::tag('i', '', ['class' => 'fas fa-user-graduate']),
+                                        ['class' => 'contact-d-icon'])
+                                    . Html::endForm()
+                                ?>
+                                <div class="contact-d-content">
+                                    <?= Html::tag('h3', Yii::t('app', "Talaba"))?>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>

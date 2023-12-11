@@ -13,10 +13,10 @@ class HemisID
     private $clientSecret              = '2wYsvY1NMjVMGn13OYicTTwHZrXQjc0dNtMw9v9p';
 
     // Domain orqali kirish
-    private $staffDevelopmentDomain    = 'http://127.0.0.1/';
+    private $staffDevelopmentDomain    = 'http://127.0.0.1:8024/';
     private $staffProductionDomain     = 'https://staff.ssuv.uz/';
-    private $studentRedirectUri        = 'hemis-student-login';
-    private $employeeRedirectUri       = 'hemis-employee-login';
+    private $studentRedirectUri        = 'student-login';
+    private $employeeRedirectUri       = 'employee-login';
 
     // Universitetning Sudent va hodimlar manzili
     private $clientStudentDoamin       = 'https://student.otmsamvmi.uz/';
@@ -30,7 +30,7 @@ class HemisID
     CONST TYPE_EMPLOYEE = 'employee';
 
     // Host
-    CONST HOST_LOCAL  = '127.0.0.1';
+    CONST HOST_LOCAL  = '127.0.0.1:8024';
     CONST HOST_GLOBAL = 'staff.ssuv.uz';
 
     /**

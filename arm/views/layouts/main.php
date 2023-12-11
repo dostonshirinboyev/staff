@@ -1,10 +1,14 @@
 <?php
 
+use arm\assets\AppAsset;
+use settings\repositories\user\UserPersonalDataRepository;
+use yii\helpers\Html;
+
 /* @var $this \yii\web\View */
 /* @var $content string */
+/* @var $userPersonalData UserPersonalDataRepository */
 
-use arm\assets\AppAsset;
-use yii\helpers\Html;
+$userPersonalData = (new UserPersonalDataRepository())->get(Yii::$app->user->id);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -67,7 +71,8 @@ AppAsset::register($this);
 </div>
 
 <?= $this->render(
-    'header'
+    'header',
+    ['userPersonalData' => $userPersonalData]
 ); ?>
 <section class="hero-area hero2-area">
     <div class="container">

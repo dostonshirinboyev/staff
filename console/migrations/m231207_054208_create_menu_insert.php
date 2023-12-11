@@ -1,9 +1,7 @@
 <?php
 
-use settings\entities\menu\Menu;
 use settings\repositories\enum\EnumMenuCategoryRepository;
 use yii\db\Migration;
-use yii\helpers\Console;
 
 /**
  * Class m231207_054208_create_menu_insert
@@ -198,6 +196,7 @@ class m231207_054208_create_menu_insert extends Migration
                         ]
                     ]
                 )->execute();
+
             $parentId = Yii::$app->db->getLastInsertID();
 
             foreach ($menu['sub_menu'] as $key => $subMenu) {

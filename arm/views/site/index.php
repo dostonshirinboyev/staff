@@ -231,9 +231,9 @@ $this->title = Yii::$app->name;
                             <li class="nav-item">
                                 <?= Html::a(Yii::t('app', "ZiyoNET"), ['library/library-ziyonet/lists'], ['class' => 'animated shadow-lg']);?>
                             </li>
-                            <li class="nav-item">
-                                <?= Html::a(Yii::t('app', "Milliy kutubxona"), ['library/library-ziyonet/lists'], ['class' => 'animated shadow-lg']);?>
-                            </li>
+<!--                            <li class="nav-item">-->
+<!--                                --><?//= Html::a(Yii::t('app', "Milliy kutubxona"), ['library/library-ziyonet/lists'], ['class' => 'animated shadow-lg']);?>
+<!--                            </li>-->
                         </ul>
                     </div>
                 </div>
