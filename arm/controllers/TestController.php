@@ -195,11 +195,12 @@ class TestController extends Controller
             ],
         ];
 
-        $params = array_merge(
-            require __DIR__ . '/../../common/config/params-local.php',
-        );
-        echo "<pre>";
-        print_r($params);
+//        $params = array_merge(
+//            require __DIR__ . '/../../common/config/params-local.php',
+//        );
+//        echo "<pre>";
+//        print_r($params);
+        echo "TEst";
     }
 
     public function actionZiyonet(): string
